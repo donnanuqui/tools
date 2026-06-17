@@ -26,6 +26,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .nav-links{display:flex;gap:2.5rem;list-style:none}
 .nav-links a{font-size:1.08rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s}
 .nav-links a:hover{color:var(--ink)}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:0.5rem;flex-direction:column;gap:5px;z-index:101}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--ink);transition:all 0.3s}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding-top:72px;padding-left:6vw;padding-right:6vw}
 .hero-inner{max-width:720px;display:flex;flex-direction:column;align-items:center}
 .hero-eyebrow{font-size:1.02rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1.75rem}
@@ -158,12 +163,12 @@ section{padding:7rem 6vw}
 .qresult-pain{border-left:3px solid;padding:1.25rem;margin-bottom:1.25rem;border-radius:4px}
 .qresult-pain-title{font-size:1.1rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.75rem}
 .qresult-pain-item{display:flex;gap:8px;font-size:1.08rem;padding:4px 0;line-height:1.6}
-.qresult-snapshot{background:rgba(255,255,255,0.05);padding:1.25rem;margin-bottom:1.5rem;border-radius:4px}
-.qresult-snapshot-title{font-size:1.1rem;font-weight:500;text-transform:uppercase;letter-spacing:0.08em;color:#9a9890;margin-bottom:0.75rem}
-.qresult-snapshot-item{display:flex;align-items:center;gap:10px;font-size:1.08rem;padding:5px 0}
-.qresult-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.qresult-snapshot{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);padding:1.25rem;margin-bottom:1.5rem;border-radius:4px}
+.qresult-snapshot-title{font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:1rem}
+.qresult-snapshot-item{display:flex;align-items:center;gap:12px;font-size:1rem;padding:8px 0;color:#ffffff}
+.qresult-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
 .qresult-cta{display:block;text-align:center;margin-bottom:0.75rem;padding:0.85rem 2rem;background:var(--accent);color:var(--ink);font-size:1.08rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;transition:opacity 0.2s;font-weight:500}
-.qresult-cta:hover{background:#c8aa82;color:#000000}
+.qresult-cta:hover{background:#c8aa82;color:#000000;transform:translateY(-2px);box-shadow:0 6px 18px rgba(184,156,110,0.4)}
 .qresult-note{font-size:1.1rem;color:#e0dcd4;text-align:center;margin-bottom:1.25rem}
 .qresult-retake{background:none;border:none;font-size:1.02rem;color:#e0dcd4;cursor:pointer;text-decoration:underline;display:block;margin:0 auto;font-family:'DM Sans',sans-serif}
 /* CONTACT */
@@ -184,9 +189,14 @@ section{padding:7rem 6vw}
 .float-dismiss{position:absolute;top:-7px;right:-7px;width:18px;height:18px;background:var(--muted);border-radius:50%;border:none;cursor:pointer;font-size:10px;color:white;line-height:18px;text-align:center;padding:0;font-family:sans-serif}
 .float-btn{width:56px;height:56px;background:#0099FF;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,153,255,0.4);text-decoration:none;transition:transform 0.2s}
 .float-btn:hover{transform:scale(1.08)}
-.download-btn{margin-top:1rem;display:inline-block;padding:0.75rem 1.5rem;background:transparent;border:1px solid var(--accent);color:var(--accent);font-size:0.875rem;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all 0.2s}
-.download-btn:hover{background:#b89c6e;color:#000000}
+.download-btn{margin-top:1.5rem;display:inline-block;padding:0.9rem 1.75rem;background:var(--accent);border:1px solid var(--accent);color:#000000;font-size:0.95rem;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:600;transition:all 0.2s;border-radius:4px}
+.download-btn:hover{background:#c8aa82;color:#000000;transform:translateY(-1px);box-shadow:0 4px 12px rgba(184,156,110,0.3)}
 footer{border-top:1px solid var(--bone);padding:2rem 6vw;display:flex;justify-content:space-between;align-items:center;font-size:1.1rem;color:var(--muted);letter-spacing:0.06em}
+.inflation-card{background:rgba(184,156,110,0.12);border:1px solid rgba(184,156,110,0.3);border-radius:6px;padding:1.1rem 1.25rem;margin-top:1.25rem}
+.inflation-card-header{display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem}
+.inflation-icon{font-size:1.1rem}
+.inflation-label{font-size:0.85rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:var(--accent)}
+.inflation-text{font-size:1.05rem;color:#e8e4dc;line-height:1.7;font-style:normal}
 @media(max-width:768px){
   body{font-size:15px}
   .tools-eyebrow{font-size:1.6rem}
@@ -211,7 +221,11 @@ footer{border-top:1px solid var(--bone);padding:2rem 6vw;display:flex;justify-co
   .meet-inner{grid-template-columns:1fr}
   .meet-badge{right:0;bottom:0}
   .meet-feelings{grid-template-columns:1fr}
-  .nav-links{display:none}
+  .nav-toggle{display:flex}
+  .nav-links{position:fixed;top:0;right:0;bottom:0;width:100%;max-width:320px;background:var(--ivory);flex-direction:column;justify-content:center;align-items:center;gap:2rem;transform:translateX(100%);transition:transform 0.3s ease;padding:2rem;box-shadow:-4px 0 24px rgba(0,0,0,0.1);z-index:99}
+  .nav-links.open{transform:translateX(0)}
+  .nav-links a{font-size:1.25rem;letter-spacing:0.15em}
+  .nav-links li{list-style:none}
   .contact-grid{grid-template-columns:1fr}
   .tool-fields-grid{grid-template-columns:1fr}
   .tools-tabs{gap:0.4rem}
@@ -225,8 +239,13 @@ footer{border-top:1px solid var(--bone);padding:2rem 6vw;display:flex;justify-co
 <body>
 
 <nav>
-  <a class="nav-logo" href="https://me.donnanuqui.com">Donna Nuqui</a>
-  <ul class="nav-links"><li><a href="https://me.donnanuqui.com">Home</a></li><li><a href="https://me.donnanuqui.com/#about">About</a></li><li><a href="/" style="color:var(--ink);">Free Tools</a></li><li><a href="https://me.donnanuqui.com/#contact">Contact</a></li></ul>
+  <a class="nav-logo" href="#">Donna Nuqui</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" onclick="toggleNav()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="nav-links" id="navLinks"><li><a href="https://me.donnanuqui.com">Home</a></li><li><a href="https://me.donnanuqui.com/#about">About</a></li><li><a href="/" style="color:var(--ink);">Free Tools</a></li><li><a href="https://me.donnanuqui.com/#contact">Contact</a></li>  </ul>
 </nav>
 <section id="tools" class="tools-section">
   <p class="section-label">Free Tools</p>
@@ -258,10 +277,10 @@ footer{border-top:1px solid var(--bone);padding:2rem 6vw;display:flex;justify-co
       <div id="q-sit" style="display:none;">
         <p style="font-size:0.95rem;font-weight:500;margin-bottom:0.35rem;color:#ffffff;">First &mdash; which best describes you?</p>
         <p style="font-size:0.85rem;color:#e0dcd4;margin-bottom:1.25rem;">Your results will be personalized based on your situation.</p>
-        <button class="sit-btn" onclick="qSelectSit('breadwinner',this)"><span class="sit-btn-icon">&#127968;</span><div><strong>I'm the breadwinner</strong><br><span style="font-size:0.8rem;color:#9a9890;">I support my spouse, kids, or immediate family. My income keeps the household running.</span></div></button>
-        <button class="sit-btn" onclick="qSelectSit('single_parent',this)"><span class="sit-btn-icon">&#128105;</span><div><strong>I'm a single parent</strong><br><span style="font-size:0.8rem;color:var(--muted);">I run the household on a single income. My kids completely depend on my solo earnings.</span></div></button>
-        <button class="sit-btn" onclick="qSelectSit('sandwich',this)"><span class="sit-btn-icon">&#128116;</span><div><strong>I'm in the sandwich generation</strong><br><span style="font-size:0.8rem;color:#9a9890;">I support both my kids AND my aging parents at the same time. Two generations depend on me.</span></div></button>
-        <button class="sit-btn" onclick="qSelectSit('solo',this)"><span class="sit-btn-icon">&#128100;</span><div><strong>I'm living independently</strong><br><span style="font-size:0.8rem;color:var(--muted);">I manage my finances solo. No dependents &mdash; just me building my future.</span></div></button>
+        <button class="sit-btn" onclick="qSelectSit('breadwinner',this)"><span class="sit-btn-icon">&#127968;</span><div><strong style="font-size:1.05rem;color:#ffffff;display:block;margin-bottom:4px;">I'm the breadwinner</strong><span style="font-size:0.95rem;color:#e8e4dc;line-height:1.5;">I support my spouse, kids, or immediate family. My income keeps the household running.</span></div></button>
+        <button class="sit-btn" onclick="qSelectSit('single_parent',this)"><span class="sit-btn-icon">&#128105;</span><div><strong style="font-size:1.05rem;color:#ffffff;display:block;margin-bottom:4px;">I'm a single parent</strong><span style="font-size:0.8rem;color:var(--muted);">I run the household on a single income. My kids completely depend on my solo earnings.</span></div></button>
+        <button class="sit-btn" onclick="qSelectSit('sandwich',this)"><span class="sit-btn-icon">&#128116;</span><div><strong style="font-size:1.05rem;color:#ffffff;display:block;margin-bottom:4px;">I'm in the sandwich generation</strong><span style="font-size:0.95rem;color:#e8e4dc;line-height:1.5;">I support both my kids AND my aging parents at the same time. Two generations depend on me.</span></div></button>
+        <button class="sit-btn" onclick="qSelectSit('solo',this)"><span class="sit-btn-icon">&#128100;</span><div><strong style="font-size:1.05rem;color:#ffffff;display:block;margin-bottom:4px;">I'm living independently</strong><span style="font-size:0.8rem;color:var(--muted);">I manage my finances solo. No dependents &mdash; just me building my future.</span></div></button>
         <button class="btn-primary" id="q-sit-btn" style="width:100%;text-align:center;opacity:0.4;pointer-events:none;" onclick="qStart()">Continue</button>
       </div>
       <div id="q-questions" style="display:none;">
@@ -317,15 +336,20 @@ footer{border-top:1px solid var(--bone);padding:2rem 6vw;display:flex;justify-co
         <div class="tool-field"><label>Loans / Debt Payments (PHP)</label><input type="number" id="b-loans" placeholder="e.g. 5000" oninput="calcBudget()"></div>
         <div class="tool-field"><label>Personal &amp; Lifestyle (PHP)</label><input type="number" id="b-personal" placeholder="e.g. 4000" oninput="calcBudget()"></div>
         <div class="tool-field"><label>Other Expenses (PHP)</label><input type="text" inputmode="numeric" id="b-other" placeholder="e.g. 2,000" oninput="calcBudget()"></div>
-        <div class="tool-field"><label>Inflation Rate (%) <span style="font-size:0.75rem;opacity:0.7;text-transform:none;letter-spacing:0;">— PH average is 4%</span></label><input type="text" inputmode="numeric" id="b-inflation" placeholder="e.g. 4" oninput="calcBudget()"></div>
-      </div>
+        </div>
       <div id="b-result" style="display:none;">
         <div class="tool-result-row"><span>Total Expenses</span><span id="b-total-exp">-</span></div>
         <div class="tool-result-row"><span>Savings Potential</span><span id="b-savings">-</span></div>
         <div class="tool-result-row"><span>Savings Rate</span><span id="b-rate">-</span></div>
         <div class="tool-result-row"><span>Your expenses in 5 years (with inflation)</span><span id="b-future">-</span></div>
         <div class="tool-result-highlight"><span class="label">Status</span><span class="value" id="b-status">-</span></div>
-        <p style="font-size:0.82rem;color:#e0dcd4;margin-top:0.75rem;font-style:italic;">&#9432; Inflation means your expenses will cost more every year even if your lifestyle stays the same. Your savings need to grow faster than prices do.</p>
+        <div class="inflation-card">
+          <div class="inflation-card-header">
+            <span class="inflation-icon">&#128200;</span>
+            <span class="inflation-label">Inflation Impact (4% per year)</span>
+          </div>
+          <p class="inflation-text">Inflation means your expenses will cost more every year even if your lifestyle stays the same. Your savings need to grow faster than prices do.</p>
+        </div>
         <p class="tool-cta-note" id="b-advice"></p>
         <button class="download-btn" onclick="downloadResult('budget')">&#8681; Download My Budget Summary</button>
       </div>
@@ -348,8 +372,7 @@ footer{border-top:1px solid var(--bone);padding:2rem 6vw;display:flex;justify-co
         <div class="tool-field"><label>Utilities &amp; Bills (PHP)</label><input type="text" inputmode="numeric" id="bf-utilities" placeholder="e.g. 5,000" oninput="calcBudgetFamily()"></div>
         <div class="tool-field"><label>Loans / Debt Payments (PHP)</label><input type="text" inputmode="numeric" id="bf-loans" placeholder="e.g. 5,000" oninput="calcBudgetFamily()"></div>
         <div class="tool-field"><label>Other Expenses (PHP)</label><input type="text" inputmode="numeric" id="bf-other" placeholder="e.g. 3,000" oninput="calcBudgetFamily()"></div>
-        <div class="tool-field"><label>Inflation Rate (%) <span style="font-size:0.875rem;opacity:0.7;text-transform:none;letter-spacing:0;">— PH average is 4%</span></label><input type="text" inputmode="numeric" id="bf-inflation" placeholder="e.g. 4" oninput="calcBudgetFamily()"></div>
-      </div>
+        </div>
       <div id="bf-result" style="display:none;">
         <div class="tool-result-row"><span>Total Expenses</span><span id="bf-total-exp">-</span></div>
         <div class="tool-result-row"><span>School Costs (Tuition + Allowance)</span><span id="bf-school-total">-</span></div>
@@ -358,7 +381,13 @@ footer{border-top:1px solid var(--bone);padding:2rem 6vw;display:flex;justify-co
         <div class="tool-result-row"><span>School costs in 5 years (with inflation)</span><span id="bf-school-future">-</span></div>
         <div class="tool-result-row"><span>Total expenses in 5 years (with inflation)</span><span id="bf-future">-</span></div>
         <div class="tool-result-highlight"><span class="label">Family Budget Status</span><span class="value" id="bf-status">-</span></div>
-        <p style="font-size:0.875rem;color:#e0dcd4;margin-top:0.75rem;font-style:italic;">&#9432; School costs tend to rise every year. The earlier you plan for it, the less stressful it gets.</p>
+        <div class="inflation-card">
+          <div class="inflation-card-header">
+            <span class="inflation-icon">&#128200;</span>
+            <span class="inflation-label">Inflation Impact (4% per year)</span>
+          </div>
+          <p class="inflation-text">School costs tend to rise every year. The earlier you plan for it, the less stressful it gets.</p>
+        </div>
         <p class="tool-cta-note" id="bf-advice"></p>
         <button class="download-btn" onclick="downloadResult('budget-family')">&#8681; Download My Family Budget Summary</button>
       </div>
@@ -375,15 +404,20 @@ footer{border-top:1px solid var(--bone);padding:2rem 6vw;display:flex;justify-co
         <div class="tool-field"><label>Expected Annual Return (%)</label><input type="text" inputmode="numeric" id="r-rate" placeholder="e.g. 7" oninput="calcRetirement()"></div>
         <div class="tool-field"><label>Current Savings (PHP)</label><input type="text" inputmode="numeric" id="r-current" placeholder="e.g. 50,000" oninput="calcRetirement()"></div>
         <div class="tool-field"><label>Monthly Retirement Budget (PHP)</label><input type="text" inputmode="numeric" id="r-need" placeholder="e.g. 30,000" oninput="calcRetirement()"></div>
-        <div class="tool-field"><label>Inflation Rate (%) <span style="font-size:0.75rem;opacity:0.7;text-transform:none;letter-spacing:0;">— PH average is 4%</span></label><input type="text" inputmode="numeric" id="r-inflation" placeholder="e.g. 4" oninput="calcRetirement()"></div>
-      </div>
+        </div>
       <div id="r-result" style="display:none;">
         <div class="tool-result-row"><span>Years to Retirement</span><span id="r-years">-</span></div>
         <div class="tool-result-row"><span>Projected Fund (future value)</span><span id="r-fund">-</span></div>
         <div class="tool-result-row"><span>What that's worth in today's money</span><span id="r-real">-</span></div>
         <div class="tool-result-row"><span>Fund Needed (25-year retirement)</span><span id="r-needed">-</span></div>
         <div class="tool-result-highlight"><span class="label">Gap / Surplus</span><span class="value" id="r-gap">-</span></div>
-        <p style="font-size:0.82rem;color:#e0dcd4;margin-top:0.75rem;font-style:italic;">&#9432; "Worth in today's money" shows what your future fund can actually buy — inflation makes money worth less over time.</p>
+        <div class="inflation-card">
+          <div class="inflation-card-header">
+            <span class="inflation-icon">&#128200;</span>
+            <span class="inflation-label">Inflation Impact (4% per year)</span>
+          </div>
+          <p class="inflation-text">"Worth in today's money" shows what your future fund can actually buy — inflation makes money worth less over time.</p>
+        </div>
         <p class="tool-cta-note" id="r-advice"></p>
         <button class="download-btn" onclick="downloadResult('retirement')">&#8681; Download My Retirement Summary</button>
       </div>
@@ -425,15 +459,20 @@ footer{border-top:1px solid var(--bone);padding:2rem 6vw;display:flex;justify-co
         <div class="tool-field"><label>Current Emergency Savings (PHP)</label><input type="text" inputmode="numeric" id="e-savings" placeholder="e.g. 60,000" oninput="calcEmergency()"></div>
         <div class="tool-field"><label>Monthly Income (PHP)</label><input type="text" inputmode="numeric" id="e-income" placeholder="e.g. 50,000" oninput="calcEmergency()"></div>
         <div class="tool-field"><label>Number of Dependents</label><input type="text" inputmode="numeric" id="e-deps" placeholder="e.g. 2" oninput="calcEmergency()"></div>
-        <div class="tool-field"><label>Inflation Rate (%) <span style="font-size:0.75rem;opacity:0.7;text-transform:none;letter-spacing:0;">— PH average is 4%</span></label><input type="text" inputmode="numeric" id="e-inflation" placeholder="e.g. 4" oninput="calcEmergency()"></div>
-      </div>
+        </div>
       <div id="e-result" style="display:none;">
         <div class="tool-result-row"><span>Recommended Fund Today (6 months)</span><span id="e-target">-</span></div>
         <div class="tool-result-row"><span>What you'll need in 1 year (with inflation)</span><span id="e-inflated">-</span></div>
         <div class="tool-result-row"><span>Your Current Fund</span><span id="e-current">-</span></div>
         <div class="tool-result-row"><span>Months of Coverage</span><span id="e-months">-</span></div>
         <div class="tool-result-highlight"><span class="label">Status</span><span class="value" id="e-status">-</span></div>
-        <p style="font-size:0.82rem;color:#e0dcd4;margin-top:0.75rem;font-style:italic;">&#9432; Prices go up every year. Your emergency fund should grow too — not just sit still in a savings account.</p>
+        <div class="inflation-card">
+          <div class="inflation-card-header">
+            <span class="inflation-icon">&#128200;</span>
+            <span class="inflation-label">Inflation Impact (4% per year)</span>
+          </div>
+          <p class="inflation-text">Prices go up every year. Your emergency fund should grow too — not just sit still in a savings account.</p>
+        </div>
         <p class="tool-cta-note" id="e-advice"></p>
         <button class="download-btn" onclick="downloadResult('emergency')">&#8681; Download My Emergency Fund Summary</button>
       </div>
@@ -450,15 +489,20 @@ footer{border-top:1px solid var(--bone);padding:2rem 6vw;display:flex;justify-co
         <div class="tool-field"><label>Target Amount Today (PHP)</label><input type="text" inputmode="numeric" id="s-target" placeholder="e.g. 500,000" oninput="calcSavings()"></div>
         <div class="tool-field"><label>Already Saved (PHP)</label><input type="text" inputmode="numeric" id="s-saved" placeholder="e.g. 50,000" oninput="calcSavings()"></div>
         <div class="tool-field"><label>Monthly Savings (PHP)</label><input type="text" inputmode="numeric" id="s-monthly" placeholder="e.g. 5,000" oninput="calcSavings()"></div>
-        <div class="tool-field"><label>Inflation Rate (%) <span style="font-size:0.75rem;opacity:0.7;text-transform:none;letter-spacing:0;">— PH average is 4%</span></label><input type="text" inputmode="numeric" id="s-inflation" placeholder="e.g. 4" oninput="calcSavings()"></div>
-      </div>
+        </div>
       <div id="s-result" style="display:none;">
         <div class="tool-result-row"><span>Target Today</span><span id="s-target-now">-</span></div>
         <div class="tool-result-row"><span>Inflation-Adjusted Target</span><span id="s-target-real">-</span></div>
         <div class="tool-result-row"><span>Amount Still Needed</span><span id="s-remaining">-</span></div>
         <div class="tool-result-row"><span>Months to Goal</span><span id="s-months">-</span></div>
         <div class="tool-result-highlight"><span class="label">You'll reach your goal by</span><span class="value" id="s-date">-</span></div>
-        <p style="font-size:0.82rem;color:#e0dcd4;margin-top:0.75rem;font-style:italic;">&#9432; That house you want for PHP 3M today might cost PHP 4.4M in 10 years. This tool adjusts your target so you're saving for the real price.</p>
+        <div class="inflation-card">
+          <div class="inflation-card-header">
+            <span class="inflation-icon">&#128200;</span>
+            <span class="inflation-label">Inflation Impact (4% per year)</span>
+          </div>
+          <p class="inflation-text">That house you want for PHP 3M today might cost PHP 4.4M in 10 years. This tool adjusts your target so you're saving for the real price.</p>
+        </div>
         <p class="tool-cta-note" id="s-advice"></p>
         <button class="download-btn" onclick="downloadResult('savings')">&#8681; Download My Savings Summary</button>
       </div>
@@ -484,6 +528,25 @@ footer{border-top:1px solid var(--bone);padding:2rem 6vw;display:flex;justify-co
 </footer>
 
 <script>
+
+// =====================
+// MOBILE NAV
+// =====================
+function toggleNav() {
+  document.getElementById('navToggle').classList.toggle('open');
+  document.getElementById('navLinks').classList.toggle('open');
+}
+// Close nav when clicking a link
+document.addEventListener('DOMContentLoaded', function() {
+  var links = document.querySelectorAll('#navLinks a');
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function() {
+      document.getElementById('navToggle').classList.remove('open');
+      document.getElementById('navLinks').classList.remove('open');
+    });
+  }
+});
+
 // =====================
 // UTILS
 // =====================
@@ -880,7 +943,7 @@ if (document.readyState === 'loading') {
 function calcBudgetFamily() {
   var income    = getRawValue('bf-income');
   var kids      = getRawValue('bf-kids') || 1;
-  var inflation = (getRawValue('bf-inflation') || 4) / 100;
+  var inflation = 0.04;
   var schoolIds = ['bf-tuition','bf-allowance'];
   var otherIds  = ['bf-rent','bf-food','bf-transport','bf-utilities','bf-loans','bf-other'];
   var schoolTotal = 0;
@@ -923,7 +986,7 @@ function calcBudget() {
   var ids = ['b-rent','b-food','b-transport','b-utilities','b-loans','b-personal','b-other'];
   var expenses = 0;
   for (var i = 0; i < ids.length; i++) { expenses += getRawValue(ids[i]); }
-  var inflation = getRawValue('b-inflation') || 4;
+  var inflation = 4;
   if (!income) return;
   var savings = income - expenses;
   var rate = income > 0 ? (savings / income * 100) : 0;
@@ -961,7 +1024,7 @@ function calcRetirement() {
   var rate    = (getRawValue('r-rate') || 7) / 100;
   var current = getRawValue('r-current');
   var need    = getRawValue('r-need');
-  var inflation = (getRawValue('r-inflation') || 4) / 100;
+  var inflation = 0.04;
   if (!age || !retire || retire <= age) return;
   var years  = retire - age;
   var months = years * 12;
@@ -1013,7 +1076,7 @@ function calcEmergency() {
   var expenses  = getRawValue('e-expenses');
   var savings   = getRawValue('e-savings');
   var deps      = getRawValue('e-deps');
-  var inflation = (getRawValue('e-inflation') || 4) / 100;
+  var inflation = 0.04;
   if (!expenses) return;
   var months   = deps > 0 ? 6 : 3;
   var target   = expenses * months;
@@ -1046,26 +1109,65 @@ function calcSavings() {
   var target    = getRawValue('s-target');
   var saved     = getRawValue('s-saved');
   var monthly   = getRawValue('s-monthly');
-  var inflation = (getRawValue('s-inflation') || 4) / 100;
+  var inflation = 0.04;
   if (!target || !monthly) return;
-  var remaining  = Math.max(target - saved, 0);
-  var monthsBase = Math.ceil(remaining / monthly);
-  if (monthsBase > 600) { monthsBase = 600; } // cap at 50 years
-  var yearsBase  = monthsBase / 12;
-  var realTarget = target * Math.pow(1 + inflation, yearsBase);
-  var realRemaining = Math.max(realTarget - saved, 0);
-  var monthsFinal = Math.ceil(realRemaining / monthly);
-  if (monthsFinal > 600) { monthsFinal = 600; }
-  var date = new Date();
-  date.setMonth(date.getMonth() + monthsFinal);
-  var dateStr = date.toLocaleDateString('en-PH', { month: 'long', year: 'numeric' });
+
+  // Solve for actual months considering compound inflation:
+  // realTarget(t) = target * (1.04)^(t/12)
+  // We need: monthly * t = realTarget(t) - saved
+  // Iterate to converge
+  var months = 0;
+  var realTarget = target;
+  var found = false;
+  for (var t = 1; t <= 600; t++) {
+    var rt = target * Math.pow(1 + inflation, t / 12);
+    var needed = Math.max(rt - saved, 0);
+    if (monthly * t >= needed) {
+      months = t;
+      realTarget = rt;
+      found = true;
+      break;
+    }
+  }
+
   showEl('s-result');
-  document.getElementById('s-target-now').textContent  = fmt(target);
+  document.getElementById('s-target-now').textContent = fmt(target);
+
+  if (!found) {
+    // Unreachable within 50 years - compute what monthly is needed
+    var realTarget30 = target * Math.pow(1 + inflation, 30); // 30 years
+    var neededMonthly30 = Math.ceil((realTarget30 - saved) / 360);
+    var realTarget10 = target * Math.pow(1 + inflation, 10);
+    var neededMonthly10 = Math.ceil((realTarget10 - saved) / 120);
+
+    document.getElementById('s-target-real').textContent = 'Goal not reachable at this pace';
+    document.getElementById('s-remaining').textContent = 'Need to increase monthly savings';
+    document.getElementById('s-months').textContent = 'Beyond 50 years';
+    document.getElementById('s-date').textContent = '—';
+    document.getElementById('s-advice').textContent =
+      'At ' + fmt(monthly) + '/month, this goal is unrealistic. To reach ' + fmt(target) +
+      ' in 10 years, you would need around ' + fmt(neededMonthly10) +
+      '/month. For 30 years, around ' + fmt(neededMonthly30) +
+      '/month. Adjust your monthly savings or goal to see a realistic timeline.';
+    return;
+  }
+
+  var realRemaining = Math.max(realTarget - saved, 0);
+  var date = new Date();
+  date.setMonth(date.getMonth() + months);
+  var dateStr = date.toLocaleDateString('en-PH', { month: 'long', year: 'numeric' });
+  var years = Math.floor(months / 12);
+  var remainderMonths = months % 12;
+  var timeStr = '';
+  if (years > 0) timeStr = years + ' year' + (years > 1 ? 's' : '');
+  if (remainderMonths > 0) timeStr += (years > 0 ? ' ' : '') + remainderMonths + ' month' + (remainderMonths > 1 ? 's' : '');
+  if (!timeStr) timeStr = months + ' months';
+
   document.getElementById('s-target-real').textContent = fmt(realTarget) + ' (by the time you reach it)';
   document.getElementById('s-remaining').textContent   = fmt(realRemaining);
-  document.getElementById('s-months').textContent      = monthsFinal + ' months';
+  document.getElementById('s-months').textContent      = timeStr;
   document.getElementById('s-date').textContent        = dateStr;
-  document.getElementById('s-advice').textContent = monthsFinal <= 12
+  document.getElementById('s-advice').textContent = months <= 12
     ? 'You can reach this goal within a year. Stay consistent — and make sure your savings are in an account that earns more than inflation.'
     : 'With inflation, your real target is ' + fmt(realTarget) + ' — not just ' + fmt(target) + '. The earlier you increase your monthly savings, the closer these numbers get.';
 }
