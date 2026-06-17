@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Free Financial Tools | Donna Nuqui — Licensed Financial Advisor</title>
+<meta name="description" content="Free financial planning tools for Filipino families. Budget planner, retirement calculator, insurance estimator, emergency fund check, and more — with inflation factored in." />
+<meta name="keywords" content="financial calculator Philippines, budget planner Filipino, retirement calculator, insurance calculator, emergency fund Philippines, savings goal tracker, Donna Nuqui" />
+
+<meta property="og:title" content="Free Financial Tools | Donna Nuqui" />
+<meta property="og:description" content="Free financial planning tools for Filipino families — budget, retirement, insurance, and more." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://tools.donnanuqui.com" />
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ivory:#F7F5F0;--bone:#EDE9E0;--ink:#1A1916;--muted:#6B6860;
+  --accent:#B89C6E;--light-accent:#E8DFC9;--white:#FFFFFF;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--ivory);color:var(--ink);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.25rem 6vw;background:var(--ivory);border-bottom:1px solid var(--bone)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{font-size:1.08rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s}
+.nav-links a:hover{color:var(--ink)}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding-top:72px;padding-left:6vw;padding-right:6vw}
+.hero-inner{max-width:720px;display:flex;flex-direction:column;align-items:center}
+.hero-eyebrow{font-size:1.02rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1.75rem}
+.hero-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,5.5vw,5.5rem);font-weight:300;line-height:1.1;letter-spacing:-0.01em;margin-bottom:1.75rem}
+.hero-headline em{font-style:italic;color:var(--accent)}
+.hero-subtext{font-size:1.1rem;color:var(--muted);max-width:520px;margin-bottom:2.5rem;line-height:1.85}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn-primary{display:inline-block;padding:0.85rem 2rem;background:var(--ink);color:var(--ivory);font-size:1.08rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background 0.2s}
+.btn-primary:hover{background:#b89c6e;color:#000000}
+.btn-secondary{display:inline-block;padding:0.85rem 2rem;border:1px solid var(--ink);color:var(--ink);font-size:1.08rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;background:none;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background 0.2s}
+.btn-secondary:hover{background:#b89c6e;color:#000000;border-color:#b89c6e}
+.hero-right{background:var(--bone);position:relative;overflow:hidden;display:flex;align-items:stretch}
+.hero-panel{display:flex;flex-direction:column;gap:0;width:100%;padding:2.5rem}
+.hero-photo-wrap{position:relative;margin-bottom:1.75rem;display:flex;align-items:center;gap:1rem}
+.hero-photo{width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid var(--white)}
+.hero-photo-fallback{width:72px;height:72px;border-radius:50%;background:var(--light-accent);display:none;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--accent);border:3px solid var(--white);flex-shrink:0}
+.hero-photo-badge{display:inline-flex;align-items:center;gap:6px;background:var(--ink);color:var(--ivory);font-size:1.1rem;letter-spacing:0.1em;text-transform:uppercase;padding:5px 12px;border-radius:20px}
+.hero-stats{display:flex;align-items:center;gap:1rem;background:var(--white);padding:1.25rem 1.5rem;margin-bottom:1.5rem}
+.hero-stat{display:flex;flex-direction:column;gap:2px;flex:1;text-align:center}
+.hero-stat-num{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:var(--ink);line-height:1}
+.hero-stat-lbl{font-size:1.1rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
+.hero-stat-divider{width:1px;height:32px;background:var(--bone);flex-shrink:0}
+.hero-trust{display:flex;flex-direction:column;gap:1rem}
+.hero-trust-card{display:flex;align-items:flex-start;gap:1rem;background:var(--white);padding:1rem 1.25rem}
+.hero-trust-icon{font-size:1.25rem;flex-shrink:0;margin-top:1px}
+.hero-trust-title{font-size:1.02rem;font-weight:500;color:var(--ink);margin-bottom:2px}
+.hero-trust-desc{font-size:1.08rem;color:var(--muted);line-height:1.5}
+section{padding:7rem 6vw}
+.section-label{font-size:1.1rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:3rem;display:flex;align-items:center;gap:1rem}
+.section-label::after{content:'';display:block;height:1px;width:40px;background:var(--accent)}
+/* MEET */
+.meet{background:var(--white);padding:7rem 6vw}
+.meet-inner{display:grid;grid-template-columns:340px 1fr;gap:6vw;align-items:start;max-width:1100px}
+.meet-photo-wrap{position:relative}
+.meet-photo{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+.meet-photo-placeholder{width:100%;aspect-ratio:4/5;background:var(--bone);display:none;align-items:center;justify-content:center}
+.meet-photo-monogram{font-family:'Cormorant Garamond',serif;font-size:5rem;font-weight:300;color:var(--light-accent)}
+.meet-badge{position:absolute;bottom:-1.5rem;right:-1.5rem;background:var(--ink);color:var(--ivory);padding:1.25rem 1.5rem;text-align:center}
+.meet-badge-title{font-size:1.1rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:0.3rem}
+.meet-badge-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;line-height:1.3}
+.meet-greeting{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.5rem);font-weight:300;line-height:1.15;margin-bottom:1.75rem}
+.meet-greeting em{font-style:italic;color:var(--accent)}
+.meet-body{font-size:1.1rem;color:var(--muted);line-height:1.9;margin-bottom:1.25rem}
+.meet-body strong{color:var(--ink);font-weight:500}
+.meet-feelings{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:2rem 0}
+.feeling-card{background:var(--ivory);border-left:3px solid var(--accent);padding:1rem 1.25rem}
+.feeling-card p{font-size:0.95rem;color:var(--muted);line-height:1.7;font-style:normal}
+.meet-tagline{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;color:var(--ink);margin-top:1.75rem;border-top:1px solid var(--bone);padding-top:1.5rem}
+/* SERVICES */
+.services-bg{background:var(--ink);color:#ffffff}
+.services-bg .section-label{color:var(--accent)}
+.services-bg .section-label::after{background:var(--accent)}
+.services-intro{font-family:'Cormorant Garamond',serif;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:300;line-height:1.3;max-width:640px;margin-bottom:4rem}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:#2a2a28}
+.service-card{background:var(--ink);padding:2.5rem 2rem;transition:background 0.2s}
+.service-card:hover{background:#222220}
+.service-number{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--accent);margin-bottom:1.25rem}
+.service-title{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:400;margin-bottom:0.75rem;color:#ffffff}
+.service-desc{font-size:1.1rem;color:#d4d0c8;line-height:1.75}
+/* PHILOSOPHY */
+.philosophy{background:var(--bone);text-align:center;padding:7rem 6vw}
+.philosophy-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:300;font-style:italic;line-height:1.4;max-width:760px;margin:0 auto 2rem;color:var(--ink)}
+.philosophy-attr{font-size:1.1rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)}
+.philosophy-sub{font-size:1.05rem;color:var(--muted);margin-top:1rem;margin-bottom:2rem;line-height:1.7;max-width:480px;margin-left:auto;margin-right:auto}
+.philosophy-cta{display:inline-block;padding:0.9rem 2.25rem;background:var(--ink);color:var(--ivory);font-size:0.88rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;transition:background 0.2s}
+.philosophy-cta:hover{background:#b89c6e;color:#000000}
+/* TOOLS */
+.tools-section{background:var(--ink);padding:7rem 6vw}
+.tools-section .section-label{color:var(--accent)}
+.tools-section .section-label::after{background:var(--accent)}
+.tools-eyebrow{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;color:#ffffff;line-height:1.3;max-width:640px;margin-bottom:1rem}
+.tools-intro-text{font-size:1.1rem;color:#e8e4dc;max-width:560px;margin-bottom:3rem;line-height:1.8}
+.tools-tabs{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2.5rem}
+.tool-tab{padding:0.65rem 1.35rem;font-size:1.08rem;letter-spacing:0.1em;text-transform:uppercase;background:rgba(255,255,255,0.08);color:#ffffff;border:1px solid rgba(255,255,255,0.15);cursor:pointer;transition:all 0.2s;font-family:'DM Sans',sans-serif}
+.tool-tab:hover{background:rgba(255,255,255,0.12);color:#ffffff}
+.tool-tab.active{background:var(--accent);color:var(--ink);border-color:var(--accent);font-weight:500}
+.tool-panel{display:none}
+.tool-panel.active{display:block}
+.tool-box{background:#2a2a27;border:1px solid rgba(255,255,255,0.15);padding:2.5rem;max-width:760px}
+.tool-box h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;margin-bottom:0.5rem;color:#ffffff}
+.tool-desc{font-size:1.1rem;color:#e8e4dc;margin-bottom:2rem;line-height:1.7}
+.tool-field{display:flex;flex-direction:column;gap:0.35rem;margin-bottom:1.25rem}
+.tool-field label{font-size:1.02rem;letter-spacing:0.14em;text-transform:uppercase;color:#e0dcd4}
+.tool-field input,.tool-field select{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);padding:0.75rem 1rem;font-family:'DM Sans',sans-serif;font-size:1.1rem;color:var(--ivory);outline:none;transition:border-color 0.2s;width:100%}
+.tool-field input::placeholder{color:#555350}
+.tool-field input:focus,.tool-field select:focus{border-color:var(--accent)}
+.tool-fields-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 1.5rem}
+.tool-result-row{display:flex;justify-content:space-between;align-items:center;padding:0.75rem 0;border-bottom:1px solid rgba(255,255,255,0.07);font-size:1.1rem}
+.tool-result-row:last-child{border-bottom:none}
+.tool-result-row span:first-child{color:#e0dcd4}
+.tool-result-row span:last-child{font-weight:500;color:#ffffff}
+.tool-result-highlight{background:var(--accent);color:var(--ink);padding:1.25rem 1.5rem;margin-top:1.25rem;display:flex;justify-content:space-between;align-items:center}
+.tool-result-highlight .label{font-size:1.1rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(26,25,22,0.7)}
+.tool-result-highlight .value{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--ink)}
+.tool-cta-note{font-size:1.1rem;color:#e0dcd4;margin-top:1.25rem;font-style:italic;line-height:1.6}
+/* QUIZ */
+.sit-btn{background:rgba(255,255,255,0.06);border:2px solid transparent;padding:1rem 1.25rem;text-align:left;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:1.08rem;color:#ffffff;line-height:1.5;transition:all 0.2s;width:100%;margin-bottom:0.65rem;display:flex;align-items:flex-start;gap:0.75rem}
+.sit-btn:hover{border-color:var(--accent);background:rgba(184,156,110,0.15)}
+.sit-btn.selected{border-color:var(--accent);background:rgba(184,156,110,0.2)}
+.sit-btn-icon{font-size:1.4rem;flex-shrink:0}
+.quiz-opt{background:rgba(255,255,255,0.06);border:2px solid transparent;padding:0.75rem 1rem;text-align:left;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:1.08rem;color:#ffffff;transition:all 0.2s;width:100%;margin-bottom:0.5rem}
+.quiz-opt:hover{border-color:var(--accent)}
+.quiz-opt.selected{border-color:var(--accent);background:rgba(184,156,110,0.2)}
+.quiz-progress-bar{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;overflow:hidden;margin-bottom:1.5rem}
+.quiz-progress-fill{height:100%;background:var(--accent);border-radius:2px;transition:width 0.3s}
+.quiz-meta{display:flex;justify-content:space-between;font-size:1.08rem;color:#e0dcd4;margin-bottom:0.5rem}
+.quiz-nav{display:flex;gap:1rem;margin-top:1.5rem;align-items:center}
+.quiz-badge{display:inline-block;font-size:1.1rem;font-weight:500;padding:3px 12px;border-radius:20px;margin-bottom:1rem}
+.quiz-qtext{font-size:1.1rem;font-weight:500;line-height:1.5;margin-bottom:1.25rem;color:#ffffff}
+/* LEAD GATE */
+.lead-gate{background:#2a2a27;border:1px solid rgba(255,255,255,0.15);padding:2rem;text-align:center}
+.lead-gate h4{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;margin-bottom:0.5rem;color:#ffffff}
+.lead-gate p.gate-desc{font-size:1.02rem;color:#e0dcd4;margin-bottom:1.5rem;line-height:1.7}
+.lead-gate-fields{display:flex;flex-direction:column;gap:0.75rem;margin-bottom:1rem}
+.lead-gate-fields input{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);padding:0.75rem 1rem;font-family:'DM Sans',sans-serif;font-size:1.1rem;color:var(--ivory);outline:none;transition:border-color 0.2s;width:100%}
+.lead-gate-fields input::placeholder{color:#555350}
+.lead-gate-fields input:focus{border-color:var(--accent)}
+.gate-note{font-size:1.08rem;color:#e0dcd4;margin-top:0.75rem;line-height:1.6}
+.gate-skip{background:none;border:none;color:var(--accent);cursor:pointer;font-size:1.1rem;font-family:'DM Sans',sans-serif;text-decoration:underline;padding:0}
+/* QUIZ RESULT */
+.qresult-score{width:80px;height:80px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 1.25rem}
+.qresult-score-num{font-size:1.5rem;font-weight:600;line-height:1}
+.qresult-score-lbl{font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em}
+.qresult-title{font-size:1.1rem;font-weight:600;text-align:center;margin-bottom:0.75rem;color:#ffffff}
+.qresult-desc{font-size:1.1rem;color:#e0dcd4;text-align:center;line-height:1.7;margin-bottom:1.5rem}
+.qresult-pain{border-left:3px solid;padding:1.25rem;margin-bottom:1.25rem;border-radius:4px}
+.qresult-pain-title{font-size:1.1rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.75rem}
+.qresult-pain-item{display:flex;gap:8px;font-size:1.08rem;padding:4px 0;line-height:1.6}
+.qresult-snapshot{background:rgba(255,255,255,0.05);padding:1.25rem;margin-bottom:1.5rem;border-radius:4px}
+.qresult-snapshot-title{font-size:1.1rem;font-weight:500;text-transform:uppercase;letter-spacing:0.08em;color:#9a9890;margin-bottom:0.75rem}
+.qresult-snapshot-item{display:flex;align-items:center;gap:10px;font-size:1.08rem;padding:5px 0}
+.qresult-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.qresult-cta{display:block;text-align:center;margin-bottom:0.75rem;padding:0.85rem 2rem;background:var(--accent);color:var(--ink);font-size:1.08rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;transition:opacity 0.2s;font-weight:500}
+.qresult-cta:hover{background:#c8aa82;color:#000000}
+.qresult-note{font-size:1.1rem;color:#e0dcd4;text-align:center;margin-bottom:1.25rem}
+.qresult-retake{background:none;border:none;font-size:1.02rem;color:#e0dcd4;cursor:pointer;text-decoration:underline;display:block;margin:0 auto;font-family:'DM Sans',sans-serif}
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:start}
+.contact-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.2;margin-bottom:1rem}
+.contact-sub{color:var(--muted);font-size:1.1rem;line-height:1.8;margin-bottom:2rem}
+.contact-details{display:flex;flex-direction:column;gap:1.25rem}
+.contact-item-label{font-size:1.1rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:0.2rem}
+.contact-item-value{font-size:1.1rem;color:var(--ink)}
+.contact-form{display:flex;flex-direction:column;gap:1.25rem}
+.form-group{display:flex;flex-direction:column;gap:0.4rem}
+.form-group label{font-size:1.1rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+.form-group input,.form-group textarea{background:var(--bone);border:1px solid var(--bone);padding:0.85rem 1rem;font-family:'DM Sans',sans-serif;font-size:1.1rem;color:var(--ink);outline:none;transition:border-color 0.2s;resize:vertical}
+.form-group input:focus,.form-group textarea:focus{border-color:var(--accent)}
+/* FLOATING */
+.float-messenger{position:fixed;bottom:1.75rem;right:1.75rem;z-index:999;display:flex;flex-direction:column;align-items:flex-end;gap:0.5rem}
+.float-bubble{background:var(--ink);color:var(--ivory);font-size:1.08rem;letter-spacing:0.04em;padding:0.6rem 1rem;white-space:nowrap;box-shadow:0 4px 16px rgba(0,0,0,0.15);position:relative}
+.float-dismiss{position:absolute;top:-7px;right:-7px;width:18px;height:18px;background:var(--muted);border-radius:50%;border:none;cursor:pointer;font-size:10px;color:white;line-height:18px;text-align:center;padding:0;font-family:sans-serif}
+.float-btn{width:56px;height:56px;background:#0099FF;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,153,255,0.4);text-decoration:none;transition:transform 0.2s}
+.float-btn:hover{transform:scale(1.08)}
+.download-btn{margin-top:1rem;display:inline-block;padding:0.75rem 1.5rem;background:transparent;border:1px solid var(--accent);color:var(--accent);font-size:0.875rem;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all 0.2s}
+.download-btn:hover{background:#b89c6e;color:#000000}
+footer{border-top:1px solid var(--bone);padding:2rem 6vw;display:flex;justify-content:space-between;align-items:center;font-size:1.1rem;color:var(--muted);letter-spacing:0.06em}
+@media(max-width:768px){
+  body{font-size:15px}
+  .tools-eyebrow{font-size:1.6rem}
+  .tools-intro-text{font-size:0.95rem}
+  .section-label{font-size:0.7rem}
+  .tool-box h3{font-size:1.4rem}
+  .tool-desc{font-size:0.9rem}
+  .tool-field label{font-size:0.7rem}
+  .tool-field input{font-size:0.9rem}
+  .tool-result-row{font-size:0.85rem}
+  .tool-result-highlight .value{font-size:1.5rem}
+  .quiz-qtext{font-size:0.95rem}
+  .quiz-opt{font-size:0.85rem}
+  .sit-btn{font-size:0.85rem}
+  .btn-primary,.btn-secondary{font-size:0.75rem;padding:0.75rem 1.5rem}
+  .lead-gate h4{font-size:1.3rem}
+  .lead-gate p.gate-desc{font-size:0.88rem}
+  .qresult-title{font-size:1.05rem}
+  .qresult-desc{font-size:0.9rem}
+  footer{font-size:0.8rem}
+  .hero{min-height:auto;padding-top:100px;padding-bottom:4rem}
+  .meet-inner{grid-template-columns:1fr}
+  .meet-badge{right:0;bottom:0}
+  .meet-feelings{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .contact-grid{grid-template-columns:1fr}
+  .tool-fields-grid{grid-template-columns:1fr}
+  .tools-tabs{gap:0.4rem}
+  .tool-tab{font-size:1.08rem;padding:0.5rem 0.9rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="https://me.donnanuqui.com">Donna Nuqui</a>
+  <ul class="nav-links"><li><a href="https://me.donnanuqui.com">Home</a></li><li><a href="https://me.donnanuqui.com/#about">About</a></li><li><a href="/" style="color:var(--ink);">Free Tools</a></li><li><a href="https://me.donnanuqui.com/#contact">Contact</a></li></ul>
+</nav>
+<section id="tools" class="tools-section">
+  <p class="section-label">Free Tools</p>
+  <p class="tools-eyebrow">Find out where you stand — right now, for free.</p>
+  <p class="tools-intro-text">Free tools that show you exactly where your finances stand. Fill in your details and get your personalized results in minutes.</p>
+  <div class="tools-tabs">
+    <button class="tool-tab active" onclick="showTool(this,'quiz')">Financial Readiness Check</button>
+    <button class="tool-tab" onclick="showTool(this,'budget')">Budget Planner (Single)</button>
+    <button class="tool-tab" onclick="showTool(this,'budget-family')">Budget Planner (Family)</button>
+    <button class="tool-tab" onclick="showTool(this,'retirement')">Retirement Calculator</button>
+    <button class="tool-tab" onclick="showTool(this,'insurance')">Insurance Estimator</button>
+    <button class="tool-tab" onclick="showTool(this,'emergency')">Emergency Fund Check</button>
+    <button class="tool-tab" onclick="showTool(this,'savings')">Savings Goal Tracker</button>
+  </div>
+
+  <!-- QUIZ -->
+  <div id="tool-quiz" class="tool-panel active">
+    <div class="tool-box">
+      <h3>Financial Readiness Check</h3>
+      <p class="tool-desc">Answer 6 honest questions and find out exactly where you stand &mdash; and what to do next based on your real situation.</p>
+      <div id="q-hero">
+        <div style="display:flex;gap:1.25rem;flex-wrap:wrap;margin-bottom:1.5rem;">
+          <span style="font-size:0.8rem;color:var(--muted);">&#9201; 2 minutes</span>
+          <span style="font-size:0.8rem;color:var(--muted);">&#128274; 100% private</span>
+          <span style="font-size:0.8rem;color:var(--muted);">&#10003; Instant results</span>
+        </div>
+        <button class="btn-primary" style="width:100%;text-align:center;" onclick="qShowSit()">Check my financial readiness</button>
+      </div>
+      <div id="q-sit" style="display:none;">
+        <p style="font-size:0.95rem;font-weight:500;margin-bottom:0.35rem;color:#ffffff;">First &mdash; which best describes you?</p>
+        <p style="font-size:0.85rem;color:#e0dcd4;margin-bottom:1.25rem;">Your results will be personalized based on your situation.</p>
+        <button class="sit-btn" onclick="qSelectSit('breadwinner',this)"><span class="sit-btn-icon">&#127968;</span><div><strong>I'm the breadwinner</strong><br><span style="font-size:0.8rem;color:#9a9890;">I support my spouse, kids, or immediate family. My income keeps the household running.</span></div></button>
+        <button class="sit-btn" onclick="qSelectSit('single_parent',this)"><span class="sit-btn-icon">&#128105;</span><div><strong>I'm a single parent</strong><br><span style="font-size:0.8rem;color:var(--muted);">I run the household on a single income. My kids completely depend on my solo earnings.</span></div></button>
+        <button class="sit-btn" onclick="qSelectSit('sandwich',this)"><span class="sit-btn-icon">&#128116;</span><div><strong>I'm in the sandwich generation</strong><br><span style="font-size:0.8rem;color:#9a9890;">I support both my kids AND my aging parents at the same time. Two generations depend on me.</span></div></button>
+        <button class="sit-btn" onclick="qSelectSit('solo',this)"><span class="sit-btn-icon">&#128100;</span><div><strong>I'm living independently</strong><br><span style="font-size:0.8rem;color:var(--muted);">I manage my finances solo. No dependents &mdash; just me building my future.</span></div></button>
+        <button class="btn-primary" id="q-sit-btn" style="width:100%;text-align:center;opacity:0.4;pointer-events:none;" onclick="qStart()">Continue</button>
+      </div>
+      <div id="q-questions" style="display:none;">
+        <div class="quiz-meta"><span id="q-counter">Question 1 of 6</span><span id="q-pct">0%</span></div>
+        <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="q-bar" style="width:0%;"></div></div>
+        <div id="q-badge" class="quiz-badge"></div>
+        <p id="q-text" class="quiz-qtext"></p>
+        <div id="q-opts"></div>
+        <div class="quiz-nav">
+          <button class="btn-secondary" id="q-prev-btn" onclick="qPrev()" style="display:none;">Back</button>
+          <button class="btn-primary" id="q-next-btn" onclick="qNext()" style="opacity:0.4;pointer-events:none;">Next</button>
+        </div>
+      </div>
+      <div id="q-gate" style="display:none;">
+        <div class="lead-gate">
+          <h4>Almost there!</h4>
+          <p class="gate-desc">Enter your details below to see your personalized results. I'll only use this to follow up with you personally.</p>
+          <div class="lead-gate-fields">
+            <div>
+              <input type="text"  id="gate-name"  placeholder="Your full name" />
+              <span id="gate-name-err"  style="font-size:0.75rem;color:#c0392b;display:block;margin-top:3px;"></span>
+            </div>
+            <div>
+              <input type="email" id="gate-email" placeholder="Email address" />
+              <span id="gate-email-err" style="font-size:0.75rem;color:#c0392b;display:block;margin-top:3px;"></span>
+            </div>
+            <div>
+              <input type="tel"   id="gate-phone" placeholder="Phone / WhatsApp number" />
+              <span id="gate-phone-err" style="font-size:0.75rem;color:#c0392b;display:block;margin-top:3px;"></span>
+            </div>
+          </div>
+          <button class="btn-primary" id="gate-submit-btn" style="width:100%;text-align:center;" onclick="qGateSubmit()">Show my results</button>
+          <p id="gate-sending" style="display:none;font-size:0.85rem;color:var(--muted);text-align:center;margin-top:0.75rem;">Saving your results...</p>
+          <p class="gate-note" style="margin-top:1rem;line-height:1.6;">&#128274; Your information is private. I will never spam you, sell your data, or add you to any mailing list without your permission. This is just so I can follow up with you personally.</p>
+          <p class="gate-note" style="margin-top:0.5rem;">Rather skip? <button class="gate-skip" onclick="qGateSkip()">Go straight to results</button></p>
+        </div>
+      </div>
+      <div id="q-result" style="display:none;"></div>
+    </div>
+  </div>
+
+  <!-- BUDGET -->
+  <div id="tool-budget" class="tool-panel">
+    <div class="tool-box">
+      <h3>Monthly Budget Planner</h3>
+      <p class="tool-desc">Enter your monthly income and expenses. We'll show you where your money is going and how much you could be saving.</p>
+      <div class="tool-fields-grid">
+        <div class="tool-field"><label>Monthly Income (PHP)</label><input type="number" id="b-income" placeholder="e.g. 50000" oninput="calcBudget()"></div>
+        <div class="tool-field"><label>Rent / Housing (PHP)</label><input type="number" id="b-rent" placeholder="e.g. 12000" oninput="calcBudget()"></div>
+        <div class="tool-field"><label>Food &amp; Groceries (PHP)</label><input type="number" id="b-food" placeholder="e.g. 8000" oninput="calcBudget()"></div>
+        <div class="tool-field"><label>Transportation (PHP)</label><input type="number" id="b-transport" placeholder="e.g. 3000" oninput="calcBudget()"></div>
+        <div class="tool-field"><label>Utilities &amp; Bills (PHP)</label><input type="number" id="b-utilities" placeholder="e.g. 3000" oninput="calcBudget()"></div>
+        <div class="tool-field"><label>Loans / Debt Payments (PHP)</label><input type="number" id="b-loans" placeholder="e.g. 5000" oninput="calcBudget()"></div>
+        <div class="tool-field"><label>Personal &amp; Lifestyle (PHP)</label><input type="number" id="b-personal" placeholder="e.g. 4000" oninput="calcBudget()"></div>
+        <div class="tool-field"><label>Other Expenses (PHP)</label><input type="text" inputmode="numeric" id="b-other" placeholder="e.g. 2,000" oninput="calcBudget()"></div>
+        <div class="tool-field"><label>Inflation Rate (%) <span style="font-size:0.75rem;opacity:0.7;text-transform:none;letter-spacing:0;">— PH average is 4%</span></label><input type="text" inputmode="numeric" id="b-inflation" placeholder="e.g. 4" oninput="calcBudget()"></div>
+      </div>
+      <div id="b-result" style="display:none;">
+        <div class="tool-result-row"><span>Total Expenses</span><span id="b-total-exp">-</span></div>
+        <div class="tool-result-row"><span>Savings Potential</span><span id="b-savings">-</span></div>
+        <div class="tool-result-row"><span>Savings Rate</span><span id="b-rate">-</span></div>
+        <div class="tool-result-row"><span>Your expenses in 5 years (with inflation)</span><span id="b-future">-</span></div>
+        <div class="tool-result-highlight"><span class="label">Status</span><span class="value" id="b-status">-</span></div>
+        <p style="font-size:0.82rem;color:#e0dcd4;margin-top:0.75rem;font-style:italic;">&#9432; Inflation means your expenses will cost more every year even if your lifestyle stays the same. Your savings need to grow faster than prices do.</p>
+        <p class="tool-cta-note" id="b-advice"></p>
+        <button class="download-btn" onclick="downloadResult('budget')">&#8681; Download My Budget Summary</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BUDGET FAMILY -->
+  <div id="tool-budget-family" class="tool-panel">
+    <div class="tool-box">
+      <h3>Family Budget Planner</h3>
+      <p class="tool-desc">A simple budget planner for families with kids. See where your money goes and how much you can actually save every month.</p>
+      <div class="tool-fields-grid">
+        <div class="tool-field"><label>Monthly Income (PHP)</label><input type="text" inputmode="numeric" id="bf-income" placeholder="e.g. 80,000" oninput="calcBudgetFamily()"></div>
+        <div class="tool-field"><label>Number of Kids</label><input type="text" inputmode="numeric" id="bf-kids" placeholder="e.g. 2" oninput="calcBudgetFamily()"></div>
+        <div class="tool-field"><label>Rent / Housing (PHP)</label><input type="text" inputmode="numeric" id="bf-rent" placeholder="e.g. 15,000" oninput="calcBudgetFamily()"></div>
+        <div class="tool-field"><label>Food &amp; Groceries (PHP)</label><input type="text" inputmode="numeric" id="bf-food" placeholder="e.g. 12,000" oninput="calcBudgetFamily()"></div>
+        <div class="tool-field"><label>School Tuition / Fees (PHP)</label><input type="text" inputmode="numeric" id="bf-tuition" placeholder="e.g. 8,000" oninput="calcBudgetFamily()"></div>
+        <div class="tool-field"><label>School Allowance (PHP)</label><input type="text" inputmode="numeric" id="bf-allowance" placeholder="e.g. 3,000" oninput="calcBudgetFamily()"></div>
+        <div class="tool-field"><label>Transportation (PHP)</label><input type="text" inputmode="numeric" id="bf-transport" placeholder="e.g. 5,000" oninput="calcBudgetFamily()"></div>
+        <div class="tool-field"><label>Utilities &amp; Bills (PHP)</label><input type="text" inputmode="numeric" id="bf-utilities" placeholder="e.g. 5,000" oninput="calcBudgetFamily()"></div>
+        <div class="tool-field"><label>Loans / Debt Payments (PHP)</label><input type="text" inputmode="numeric" id="bf-loans" placeholder="e.g. 5,000" oninput="calcBudgetFamily()"></div>
+        <div class="tool-field"><label>Other Expenses (PHP)</label><input type="text" inputmode="numeric" id="bf-other" placeholder="e.g. 3,000" oninput="calcBudgetFamily()"></div>
+        <div class="tool-field"><label>Inflation Rate (%) <span style="font-size:0.875rem;opacity:0.7;text-transform:none;letter-spacing:0;">— PH average is 4%</span></label><input type="text" inputmode="numeric" id="bf-inflation" placeholder="e.g. 4" oninput="calcBudgetFamily()"></div>
+      </div>
+      <div id="bf-result" style="display:none;">
+        <div class="tool-result-row"><span>Total Expenses</span><span id="bf-total-exp">-</span></div>
+        <div class="tool-result-row"><span>School Costs (Tuition + Allowance)</span><span id="bf-school-total">-</span></div>
+        <div class="tool-result-row"><span>Savings Potential</span><span id="bf-savings">-</span></div>
+        <div class="tool-result-row"><span>Savings Rate</span><span id="bf-rate">-</span></div>
+        <div class="tool-result-row"><span>School costs in 5 years (with inflation)</span><span id="bf-school-future">-</span></div>
+        <div class="tool-result-row"><span>Total expenses in 5 years (with inflation)</span><span id="bf-future">-</span></div>
+        <div class="tool-result-highlight"><span class="label">Family Budget Status</span><span class="value" id="bf-status">-</span></div>
+        <p style="font-size:0.875rem;color:#e0dcd4;margin-top:0.75rem;font-style:italic;">&#9432; School costs tend to rise every year. The earlier you plan for it, the less stressful it gets.</p>
+        <p class="tool-cta-note" id="bf-advice"></p>
+        <button class="download-btn" onclick="downloadResult('budget-family')">&#8681; Download My Family Budget Summary</button>
+      </div>
+    </div>
+  </div>
+  <div id="tool-retirement" class="tool-panel">
+    <div class="tool-box">
+      <h3>Retirement Fund Calculator</h3>
+      <p class="tool-desc">See how much you could have by retirement — and what that money will actually be worth by then. Inflation quietly shrinks the value of money over time. We factor that in so you get a realistic picture.</p>
+      <div class="tool-fields-grid">
+        <div class="tool-field"><label>Current Age</label><input type="text" inputmode="numeric" id="r-age" placeholder="e.g. 32" oninput="calcRetirement()"></div>
+        <div class="tool-field"><label>Target Retirement Age</label><input type="text" inputmode="numeric" id="r-retire" placeholder="e.g. 60" oninput="calcRetirement()"></div>
+        <div class="tool-field"><label>Monthly Savings (PHP)</label><input type="text" inputmode="numeric" id="r-monthly" placeholder="e.g. 3,000" oninput="calcRetirement()"></div>
+        <div class="tool-field"><label>Expected Annual Return (%)</label><input type="text" inputmode="numeric" id="r-rate" placeholder="e.g. 7" oninput="calcRetirement()"></div>
+        <div class="tool-field"><label>Current Savings (PHP)</label><input type="text" inputmode="numeric" id="r-current" placeholder="e.g. 50,000" oninput="calcRetirement()"></div>
+        <div class="tool-field"><label>Monthly Retirement Budget (PHP)</label><input type="text" inputmode="numeric" id="r-need" placeholder="e.g. 30,000" oninput="calcRetirement()"></div>
+        <div class="tool-field"><label>Inflation Rate (%) <span style="font-size:0.75rem;opacity:0.7;text-transform:none;letter-spacing:0;">— PH average is 4%</span></label><input type="text" inputmode="numeric" id="r-inflation" placeholder="e.g. 4" oninput="calcRetirement()"></div>
+      </div>
+      <div id="r-result" style="display:none;">
+        <div class="tool-result-row"><span>Years to Retirement</span><span id="r-years">-</span></div>
+        <div class="tool-result-row"><span>Projected Fund (future value)</span><span id="r-fund">-</span></div>
+        <div class="tool-result-row"><span>What that's worth in today's money</span><span id="r-real">-</span></div>
+        <div class="tool-result-row"><span>Fund Needed (25-year retirement)</span><span id="r-needed">-</span></div>
+        <div class="tool-result-highlight"><span class="label">Gap / Surplus</span><span class="value" id="r-gap">-</span></div>
+        <p style="font-size:0.82rem;color:#e0dcd4;margin-top:0.75rem;font-style:italic;">&#9432; "Worth in today's money" shows what your future fund can actually buy — inflation makes money worth less over time.</p>
+        <p class="tool-cta-note" id="r-advice"></p>
+        <button class="download-btn" onclick="downloadResult('retirement')">&#8681; Download My Retirement Summary</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- INSURANCE -->
+  <div id="tool-insurance" class="tool-panel">
+    <div class="tool-box">
+      <h3>Insurance Needs Estimator</h3>
+      <p class="tool-desc">A quick way to estimate how much life insurance coverage makes sense for your situation.</p>
+      <div class="tool-fields-grid">
+        <div class="tool-field"><label>Annual Income (PHP)</label><input type="number" id="i-income" placeholder="e.g. 600000" oninput="calcInsurance()"></div>
+        <div class="tool-field"><label>Number of Dependents</label><input type="number" id="i-deps" placeholder="e.g. 2" oninput="calcInsurance()"></div>
+        <div class="tool-field"><label>Outstanding Loans (PHP)</label><input type="number" id="i-loans" placeholder="e.g. 500000" oninput="calcInsurance()"></div>
+        <div class="tool-field"><label>Existing Coverage (PHP)</label><input type="number" id="i-existing" placeholder="e.g. 0" oninput="calcInsurance()"></div>
+        <div class="tool-field"><label>Years of Income to Replace</label><input type="number" id="i-years" placeholder="e.g. 10" oninput="calcInsurance()"></div>
+        <div class="tool-field"><label>Children Education Fund (PHP)</label><input type="number" id="i-educ" placeholder="e.g. 300000" oninput="calcInsurance()"></div>
+      </div>
+      <div id="i-result" style="display:none;">
+        <div class="tool-result-row"><span>Income Replacement Need</span><span id="i-income-need">-</span></div>
+        <div class="tool-result-row"><span>Debt Coverage</span><span id="i-debt">-</span></div>
+        <div class="tool-result-row"><span>Education Fund</span><span id="i-educ-r">-</span></div>
+        <div class="tool-result-row"><span>Existing Coverage</span><span id="i-existing-r">-</span></div>
+        <div class="tool-result-highlight"><span class="label">Coverage Gap</span><span class="value" id="i-gap">-</span></div>
+        <p class="tool-cta-note" id="i-advice"></p>
+        <button class="download-btn" onclick="downloadResult('insurance')">&#8681; Download My Insurance Summary</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- EMERGENCY -->
+  <div id="tool-emergency" class="tool-panel">
+    <div class="tool-box">
+      <h3>Emergency Fund Check</h3>
+      <p class="tool-desc">Find out if your savings can cover you when the unexpected happens. We also factor in inflation — because what PHP 30,000 covers today won't be the same in 5 years.</p>
+      <div class="tool-fields-grid">
+        <div class="tool-field"><label>Monthly Expenses (PHP)</label><input type="text" inputmode="numeric" id="e-expenses" placeholder="e.g. 30,000" oninput="calcEmergency()"></div>
+        <div class="tool-field"><label>Current Emergency Savings (PHP)</label><input type="text" inputmode="numeric" id="e-savings" placeholder="e.g. 60,000" oninput="calcEmergency()"></div>
+        <div class="tool-field"><label>Monthly Income (PHP)</label><input type="text" inputmode="numeric" id="e-income" placeholder="e.g. 50,000" oninput="calcEmergency()"></div>
+        <div class="tool-field"><label>Number of Dependents</label><input type="text" inputmode="numeric" id="e-deps" placeholder="e.g. 2" oninput="calcEmergency()"></div>
+        <div class="tool-field"><label>Inflation Rate (%) <span style="font-size:0.75rem;opacity:0.7;text-transform:none;letter-spacing:0;">— PH average is 4%</span></label><input type="text" inputmode="numeric" id="e-inflation" placeholder="e.g. 4" oninput="calcEmergency()"></div>
+      </div>
+      <div id="e-result" style="display:none;">
+        <div class="tool-result-row"><span>Recommended Fund Today (6 months)</span><span id="e-target">-</span></div>
+        <div class="tool-result-row"><span>What you'll need in 1 year (with inflation)</span><span id="e-inflated">-</span></div>
+        <div class="tool-result-row"><span>Your Current Fund</span><span id="e-current">-</span></div>
+        <div class="tool-result-row"><span>Months of Coverage</span><span id="e-months">-</span></div>
+        <div class="tool-result-highlight"><span class="label">Status</span><span class="value" id="e-status">-</span></div>
+        <p style="font-size:0.82rem;color:#e0dcd4;margin-top:0.75rem;font-style:italic;">&#9432; Prices go up every year. Your emergency fund should grow too — not just sit still in a savings account.</p>
+        <p class="tool-cta-note" id="e-advice"></p>
+        <button class="download-btn" onclick="downloadResult('emergency')">&#8681; Download My Emergency Fund Summary</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SAVINGS -->
+  <div id="tool-savings" class="tool-panel">
+    <div class="tool-box">
+      <h3>Savings Goal Tracker</h3>
+      <p class="tool-desc">Planning for a house, car, or your child's education? We factor in inflation so your target amount is realistic — not just what it costs today, but what it'll cost when you actually need it.</p>
+      <div class="tool-fields-grid">
+        <div class="tool-field"><label>Goal Name</label><input type="text" id="s-goal" placeholder="e.g. House down payment"></div>
+        <div class="tool-field"><label>Target Amount Today (PHP)</label><input type="text" inputmode="numeric" id="s-target" placeholder="e.g. 500,000" oninput="calcSavings()"></div>
+        <div class="tool-field"><label>Already Saved (PHP)</label><input type="text" inputmode="numeric" id="s-saved" placeholder="e.g. 50,000" oninput="calcSavings()"></div>
+        <div class="tool-field"><label>Monthly Savings (PHP)</label><input type="text" inputmode="numeric" id="s-monthly" placeholder="e.g. 5,000" oninput="calcSavings()"></div>
+        <div class="tool-field"><label>Inflation Rate (%) <span style="font-size:0.75rem;opacity:0.7;text-transform:none;letter-spacing:0;">— PH average is 4%</span></label><input type="text" inputmode="numeric" id="s-inflation" placeholder="e.g. 4" oninput="calcSavings()"></div>
+      </div>
+      <div id="s-result" style="display:none;">
+        <div class="tool-result-row"><span>Target Today</span><span id="s-target-now">-</span></div>
+        <div class="tool-result-row"><span>Inflation-Adjusted Target</span><span id="s-target-real">-</span></div>
+        <div class="tool-result-row"><span>Amount Still Needed</span><span id="s-remaining">-</span></div>
+        <div class="tool-result-row"><span>Months to Goal</span><span id="s-months">-</span></div>
+        <div class="tool-result-highlight"><span class="label">You'll reach your goal by</span><span class="value" id="s-date">-</span></div>
+        <p style="font-size:0.82rem;color:#e0dcd4;margin-top:0.75rem;font-style:italic;">&#9432; That house you want for PHP 3M today might cost PHP 4.4M in 10 years. This tool adjusts your target so you're saving for the real price.</p>
+        <p class="tool-cta-note" id="s-advice"></p>
+        <button class="download-btn" onclick="downloadResult('savings')">&#8681; Download My Savings Summary</button>
+      </div>
+    </div>
+  </div>
+
+</section>
+<div class="float-messenger">
+  <div class="float-bubble" id="float-bubble">
+    Chat me &mdash; it's free!
+    <button class="float-dismiss" onclick="document.getElementById('float-bubble').style.display='none'">x</button>
+  </div>
+  <a class="float-btn" href="https://m.me/financial.advisor.donna.n" target="_blank" title="Message Donna on Messenger">
+    <svg viewBox="0 0 24 24" fill="white" width="28" height="28" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.145 2 11.259c0 2.906 1.317 5.512 3.404 7.255v3.486l3.189-1.752A10.837 10.837 0 0012 20.518c5.523 0 10-4.145 10-9.259C22 6.145 17.523 2 12 2zm1.007 12.482l-2.551-2.72-4.979 2.72 5.479-5.815 2.613 2.72 4.917-2.72-5.479 5.815z"/></svg>
+  </a>
+</div>
+<footer>
+  <span>&copy; 2026 Donna Nuqui. All rights reserved.</span>
+  <span>
+    <a href="https://www.facebook.com/financial.advisor.donna.n" target="_blank" style="color:var(--muted);text-decoration:none;margin-right:1.5rem;">Facebook</a>
+    <a href="https://m.me/financial.advisor.donna.n" target="_blank" style="color:var(--muted);text-decoration:none;">Messenger</a>
+  </span>
+</footer>
+
+<script>
+// =====================
+// UTILS
+// =====================
+function fmt(n) {
+  return 'PHP ' + Math.round(n).toLocaleString('en-PH');
+}
+
+function showEl(id) { document.getElementById(id).style.display = 'block'; }
+function hideEl(id) { document.getElementById(id).style.display = 'none'; }
+
+// =====================
+// TAB SWITCHER
+// =====================
+function showTool(btn, name) {
+  var panels = document.querySelectorAll('.tool-panel');
+  var tabs = document.querySelectorAll('.tool-tab');
+  for (var i = 0; i < panels.length; i++) panels[i].classList.remove('active');
+  for (var i = 0; i < tabs.length; i++) tabs[i].classList.remove('active');
+  document.getElementById('tool-' + name).classList.add('active');
+  btn.classList.add('active');
+}
+
+// =====================
+// QUIZ DATA
+// =====================
+var qSit = null;
+var qCur = 0;
+var qAns = [];
+
+var qData = {
+  breadwinner: {
+    questions: [
+      { text: "Do you have an emergency fund that can cover your whole household?", options: ["Yes - 3 to 6 months of household expenses", "I have some but not enough for the whole family", "Not yet - I'm working on it", "No emergency fund at all"] },
+      { text: "If you lost your income today, how long could your family survive financially?", options: ["More than 6 months", "3 to 6 months", "Less than 3 months", "Less than a month - we'd be in trouble immediately"] },
+      { text: "Does your family have life insurance protection in case something happens to you?", options: ["Yes - they're fully covered", "Some coverage but it may not be enough", "I'm planning to get one soon", "No coverage - my family would have nothing"] },
+      { text: "Are you actively investing or growing your money outside of your salary?", options: ["Yes - I invest consistently", "I've started but not consistently", "I've been thinking about it", "Not yet - all my income goes to expenses"] },
+      { text: "Do you have a retirement plan - or will your kids need to support you someday?", options: ["I have a solid retirement plan in place", "I have a rough idea but no concrete plan", "I think about it but haven't started", "No plan - I'm relying on my kids or family"] },
+      { text: "If something happened to you tomorrow, what would happen to your family?", options: ["They'd be okay - everything is planned and protected", "They'd manage but there would be serious gaps", "It would be very difficult for them", "They would have nothing to fall back on"] }
+    ],
+    results: {
+      high: { level: "Your family is in good hands", desc: "You've built a strong foundation for the people depending on you. The next step is making sure everything stays optimized - especially as your family's needs grow.", pain: [], items: ["Emergency fund: household covered", "Life protection: in place", "Investments: growing", "Retirement: planned"], cta: "Review my family's coverage" },
+      mid:  { level: "There are gaps that need attention", desc: "You're providing for your family - but if something happened to you today, they may not be fully protected. A few intentional steps now can change everything.", pain: ["Your family's security depends on your income - and right now, one emergency could shake that foundation.", "Life coverage gaps mean your family could be left with nothing if the unexpected happens."], items: ["Emergency fund: partially covered", "Life protection: needs review", "Investments: getting started", "Retirement: needs a solid plan"], cta: "Fill the gaps - free consultation" },
+      low:  { level: "Your family is at risk right now", desc: "You're working hard for your family - but without a financial safety net, everything they depend on is vulnerable. One health crisis or job loss could change everything.", pain: ["If something happened to you tomorrow, your family would have no financial protection.", "Without an emergency fund, one unexpected expense could send the whole household into crisis.", "Your kids and spouse deserve more security than hope alone."], items: ["Emergency fund: not in place", "Life protection: none", "Investments: not started", "Action needed: start today"], cta: "Protect my family - let's talk" },
+      vlow: { level: "This is urgent - your family needs a plan", desc: "You carry your family on your shoulders every day. But right now, if anything happened to you - they would have nothing. That's not a burden you should leave them with.", pain: ["You are the only safety net your family has - and right now, that net has holes.", "No life insurance means your family loses everything if they lose you.", "Every day without a plan is a day your family is unprotected."], items: ["Emergency fund: none", "Life protection: none", "Retirement plan: none", "First step: protect your family today"], cta: "Get a plan for my family" }
+    }
+  },
+  single_parent: {
+    questions: [
+      { text: "Since you are the single source of income, do you have a personal backup fund for household expenses?", options: ["Yes - 6 months or more saved up safely", "I have some savings but it wouldn't last past a month or two", "I have very small fallback savings", "No emergency fund at all"] },
+      { text: "If your income stopped unexpectedly tomorrow, how long could your kids survive comfortably?", options: ["More than 6 months safely", "3 to 6 months", "Less than 3 months", "Less than a single month - we would be in immediate crisis"] },
+      { text: "Do you have an active life insurance plan assigned to guard your children's future?", options: ["Yes - they are completely covered and fully guarded", "I have some minor coverage but it wouldn't replace my full income", "I'm looking into plans right now", "No active coverage setup at all"] },
+      { text: "Are you actively investing dedicated funds for your kids' college education?", options: ["Yes - I invest consistently for their school path", "I have small bits stored away but not consistently", "I want to start but struggle to find surplus funds", "Not yet started at all"] },
+      { text: "Who will take care of your children financially if you get unexpectedly sick or disabled?", options: ["I have disability income protection and health coverage ready", "Family might help out but it would put a massive strain on them", "I have no idea who could absorb that weight", "We would have completely nothing to rely on"] },
+      { text: "Are you currently investing toward your own personal retirement?", options: ["Yes - I build my retirement fund alongside handling family needs", "I prioritize my children entirely - my retirement is heavily delayed", "I plan to start once the children grow older", "No retirement plan built yet"] }
+    ],
+    results: {
+      high: { level: "Your children are well protected", desc: "Managing a family entirely on your own strength is incredible, and you have built a strong financial shield. Let's make sure it remains completely solid.", pain: [], items: ["Solo backup fund: fully secure", "Life coverage: children safeguarded", "Education savings: on track", "Retirement: prioritized"], cta: "Optimize my child's future safety net" },
+      mid:  { level: "You are doing great - but gaps exist", desc: "You work tirelessly to provide stability. However, running a family solo means you carry 100% of the risk. Closing minor insurance or cash flow gaps can make all the difference.", pain: ["Since you are the single income, a sudden drop places your kids' comfort on the line immediately.", "Educational plans and legacy coverage need solid structured security instead of open-ended hopes."], items: ["Solo backup fund: partial cushion", "Life coverage: needs review", "Education plan: getting started", "Retirement fund: delayed"], cta: "Secure my gaps - free consultation" },
+      low:  { level: "The burden is high and risks are mounting", desc: "Being the sole provider is immensely heavy. Right now, without a reinforced safety setup, a minor health issue or job pause could disrupt your household fast.", pain: ["If you are unable to work tomorrow, there is no second salary to carry your children.", "Lack of life protection means your kids are exposed to extreme hardship if you are gone.", "Your retirement is being sacrificed, putting future reliance back onto your kids."], items: ["Solo backup fund: insufficient", "Life coverage: not active", "Education funds: unaddressed", "Action priority: lock in security today"], cta: "Protect my kids - let's build a plan" },
+      vlow: { level: "Urgent - your household has zero protection", desc: "You pour your heart into your children, but you are carrying the entire weight with no safety net. If you get hurt or lose your income, your children are immediately at risk.", pain: ["You are the lone safety net, and right now that net is empty.", "Zero life coverage leaves your children's housing and survival completely unprotected.", "An emergency today will trigger instant financial chaos for your family."], items: ["Solo backup fund: none", "Life coverage: none", "Disability fallback: none", "Immediate step: map out child protection"], cta: "Get a survival plan for my family" }
+    }
+  },
+  sandwich: {
+    questions: [
+      { text: "Do you have an emergency fund - for yourself, not just your family?", options: ["Yes - I have 3 to 6 months set aside", "I have some savings but it's mostly for family needs", "Very little - emergencies usually wipe me out", "No emergency fund at all"] },
+      { text: "Between your kids' needs and your parents' needs - where does your money actually go?", options: ["I've budgeted for both AND still save for myself", "I cover both but nothing is left for me", "I struggle to cover both every month", "Most months I'm running on empty"] },
+      { text: "Do you have life insurance or financial protection in place for yourself?", options: ["Yes - I'm covered", "I have some but not enough", "Planning to get one soon", "None - I've been too focused on everyone else"] },
+      { text: "Are you investing anything for your OWN future - not just your family's?", options: ["Yes - I invest regularly for myself", "Occasionally when there's something left", "I've been meaning to start", "No - everything goes to the family"] },
+      { text: "Have you thought about who will take care of YOU when you retire?", options: ["Yes - I have a retirement plan and I'm building it", "I've thought about it but haven't started", "Rarely - I'm too focused on surviving today", "I haven't had the chance to think that far ahead"] },
+      { text: "If you got sick or couldn't work for 3 months - what would happen to everyone depending on you?", options: ["We'd be okay - I have coverage and savings", "It would be tight but manageable", "It would be a crisis for the whole family", "Everyone would be in serious trouble"] }
+    ],
+    results: {
+      high: { level: "You're managing both worlds well", desc: "Carrying two generations is one of the heaviest financial loads anyone can carry - and you're doing it while still building for yourself. Keep going.", pain: [], items: ["Emergency fund: in place", "Family needs: covered", "Personal investments: growing", "Retirement: planned"], cta: "Optimize my plan - free review" },
+      mid:  { level: "You're giving everything - but keeping nothing for yourself", desc: "You're stretched between two generations and there's very little left for you. If this continues, you risk becoming the next person who needs to be supported - with no one left to do it.", pain: ["You spend on your kids' future and your parents' needs - but who is building yours?", "If you got sick tomorrow, both generations depending on you would be in crisis.", "You're at risk of reaching retirement age with nothing - because you gave it all away."], items: ["Emergency fund: limited", "Personal investment: barely started", "Retirement plan: behind schedule", "You need a plan for YOU"], cta: "Build a plan for me too" },
+      low:  { level: "You're one emergency away from everything falling apart", desc: "You're doing the most selfless thing a person can do - caring for both your children and your parents. But your own financial foundation is dangerously thin.", pain: ["One hospitalization - yours, your kids', or your parents' - and there's nothing to absorb the blow.", "You're so focused on everyone else that your own retirement is being sacrificed quietly, every month.", "You may end up needing support yourself because you spent everything supporting others."], items: ["Emergency fund: not enough", "Life protection: not in place", "Retirement savings: at risk", "Urgent: build a plan for yourself"], cta: "Start my personal plan" },
+      vlow: { level: "You're carrying too much with no safety net", desc: "You are the pillar for two generations - your children look up to you, your parents lean on you. But right now, if that pillar cracks, everything falls. You deserve a plan too.", pain: ["No emergency fund means one crisis wipes out everyone depending on you.", "No life coverage means your kids AND your parents lose their support system overnight.", "You have spent your whole life caring for others - but who is protecting you?"], items: ["Emergency fund: none", "Life protection: none", "Personal savings: none", "You matter too - start here"], cta: "Get my own financial plan" }
+    }
+  },
+  solo: {
+    questions: [
+      { text: "Do you have a personal emergency fund?", options: ["Yes - 3 to 6 months of my own expenses", "I have some savings but not enough", "Not yet - still building it", "No emergency fund at all"] },
+      { text: "If you lost your income today - how long could YOU survive on your own?", options: ["More than 6 months", "3 to 6 months", "Less than 3 months", "Less than a month"] },
+      { text: "Do you have any life insurance or financial protection for yourself?", options: ["Yes - I'm covered", "Some coverage but I'm not sure it's enough", "Planning to get one", "No protection at all"] },
+      { text: "Are you actively investing or growing your money?", options: ["Yes - I invest regularly", "I've started but I'm not consistent", "I've been thinking about it", "Not yet - I don't know where to start"] },
+      { text: "Since there's no one to fall back on - do you have a financial plan for your future?", options: ["Yes - I have a clear plan and I'm executing it", "I have a rough idea but nothing solid", "I know I should but haven't started", "No plan yet - I take it day by day"] },
+      { text: "Be honest - are you spending freely because there's no one watching?", options: ["No - I'm intentional about every peso I spend", "Mostly disciplined but I have weak moments", "I tend to spend freely and save whatever's left", "Yes - I spend without much thought about tomorrow"] }
+    ],
+    results: {
+      high: { level: "You're building something solid", desc: "You've taken ownership of your financial future - no safety net, no backup plan - just you making the right moves. Keep building.", pain: [], items: ["Emergency fund: covered", "Protection: in place", "Investments: growing", "Retirement: on track"], cta: "Grow my money further" },
+      mid:  { level: "You have a good start - but gaps remain", desc: "You're managing well for someone flying solo. But without anyone to fall back on, even small gaps in your financial plan can become big problems fast.", pain: ["There's no partner or family member to catch you if something goes wrong - your safety net is yours to build.", "An inconsistent investment habit now means a smaller cushion when you actually need it."], items: ["Emergency fund: partially built", "Protection: needs review", "Investments: inconsistent", "Retirement: needs attention"], cta: "Close my financial gaps" },
+      low:  { level: "Living solo means you can't afford not to plan", desc: "The freedom of solo living is real - but so is the risk. There's no one to split bills with in a crisis, no family member to borrow from, no backup plan. That's all on you.", pain: ["If you lost your income today, you'd be completely on your own - with no one to help cover the gap.", "No life coverage means if something happens to you, there's no financial protection for anything you've built.", "The freedom you enjoy now could disappear fast without a financial foundation."], items: ["Emergency fund: not enough", "Protection: not in place", "Investments: not started", "Time to build your own safety net"], cta: "Build my safety net" },
+      vlow: { level: "Your future self is counting on you - starting today", desc: "Solo living feels free - until it doesn't. Without a financial plan, one unexpected event can undo everything. And with no one to fall back on, the stakes are higher than you think.", pain: ["No emergency fund means one job loss, one accident, one hospital bill - and you're starting from zero.", "No one is going to remind you to save. No one is going to bail you out. This is entirely up to you.", "The longer you wait, the harder it gets to build the life you actually want."], items: ["Emergency fund: none", "Protection: none", "Investments: none", "Start now - future you will thank you"], cta: "Start my financial plan" }
+    }
+  }
+};
+
+var qMeta = {
+  breadwinner:   { label: "Breadwinner",        color: "#085041", bg: "#E1F5EE" },
+  single_parent: { label: "Single Parent",       color: "#993C1D", bg: "#FAECE7" },
+  sandwich:      { label: "Sandwich Generation", color: "#854F0B", bg: "#FAEEDA" },
+  solo:          { label: "Solo Living",          color: "#534AB7", bg: "#EEEDFE" }
+};
+
+// =====================
+// QUIZ FUNCTIONS
+// =====================
+function qShowSit() {
+  hideEl('q-hero');
+  showEl('q-sit');
+}
+
+function qSelectSit(sit, btn) {
+  qSit = sit;
+  qAns = [];
+  qCur = 0;
+  var btns = document.querySelectorAll('.sit-btn');
+  for (var i = 0; i < btns.length; i++) btns[i].classList.remove('selected');
+  btn.classList.add('selected');
+  var next = document.getElementById('q-sit-btn');
+  next.style.opacity = '1';
+  next.style.pointerEvents = 'auto';
+}
+
+function qStart() {
+  if (!qSit) return;
+  hideEl('q-sit');
+  showEl('q-questions');
+  qRender();
+}
+
+function qRender() {
+  var qs = qData[qSit].questions;
+  var q = qs[qCur];
+  var pct = Math.round((qCur / qs.length) * 100);
+  document.getElementById('q-counter').textContent = 'Question ' + (qCur + 1) + ' of ' + qs.length;
+  document.getElementById('q-pct').textContent = pct + '%';
+  document.getElementById('q-bar').style.width = pct + '%';
+  var m = qMeta[qSit];
+  document.getElementById('q-badge').textContent = m.label;
+  document.getElementById('q-badge').style.cssText = 'background:' + m.bg + ';color:' + m.color + ';display:inline-block;font-size:0.75rem;font-weight:500;padding:3px 12px;border-radius:20px;margin-bottom:1rem;';
+  document.getElementById('q-text').textContent = q.text;
+  var optsEl = document.getElementById('q-opts');
+  optsEl.innerHTML = '';
+  for (var i = 0; i < q.options.length; i++) {
+    var b = document.createElement('button');
+    b.className = 'quiz-opt' + (qAns[qCur] === i ? ' selected' : '');
+    b.textContent = q.options[i];
+    b.setAttribute('data-idx', i);
+    b.onclick = function() { qSelect(parseInt(this.getAttribute('data-idx'))); };
+    optsEl.appendChild(b);
+  }
+  var prevBtn = document.getElementById('q-prev-btn');
+  prevBtn.style.display = qCur === 0 ? 'none' : 'inline-block';
+  var nextBtn = document.getElementById('q-next-btn');
+  nextBtn.textContent = qCur === qs.length - 1 ? 'See my results' : 'Next';
+  nextBtn.style.opacity = qAns[qCur] !== undefined ? '1' : '0.4';
+  nextBtn.style.pointerEvents = qAns[qCur] !== undefined ? 'auto' : 'none';
+}
+
+function qSelect(idx) {
+  qAns[qCur] = idx;
+  var opts = document.querySelectorAll('#q-opts .quiz-opt');
+  for (var i = 0; i < opts.length; i++) opts[i].classList.remove('selected');
+  opts[idx].classList.add('selected');
+  var nextBtn = document.getElementById('q-next-btn');
+  nextBtn.style.opacity = '1';
+  nextBtn.style.pointerEvents = 'auto';
+}
+
+function qNext() {
+  if (qAns[qCur] === undefined) return;
+  var qs = qData[qSit].questions;
+  if (qCur < qs.length - 1) {
+    qCur++;
+    qRender();
+  } else {
+    hideEl('q-questions');
+    showEl('q-gate');
+  }
+}
+
+function qPrev() {
+  if (qCur > 0) { qCur--; qRender(); }
+}
+
+var SHEETS_URL = 'https://script.google.com/macros/s/AKfycbz77gI4kW6fKIXKLXWfdfZTht82123tMPaBPINr5KocEyGiZ5FJRlWzJKdaUJw1HhtXMg/exec';
+
+function qGateSubmit() {
+  var name  = document.getElementById('gate-name').value.trim();
+  var email = document.getElementById('gate-email').value.trim();
+  var phone = document.getElementById('gate-phone').value.trim();
+
+  var nameErr  = document.getElementById('gate-name-err');
+  var emailErr = document.getElementById('gate-email-err');
+  var phoneErr = document.getElementById('gate-phone-err');
+  nameErr.textContent  = '';
+  emailErr.textContent = '';
+  phoneErr.textContent = '';
+
+  var valid = true;
+  if (!name) { nameErr.textContent = 'Please enter your name.'; valid = false; }
+  if (!email || email.indexOf('@') === -1 || email.indexOf('.') === -1) { emailErr.textContent = 'Please enter a valid email address.'; valid = false; }
+  if (!phone || phone.replace(/\D/g,'').length < 7) { phoneErr.textContent = 'Please enter a valid phone number.'; valid = false; }
+  if (!valid) return;
+
+  var scores = [3, 2, 1, 0];
+  var total = 0;
+  for (var i = 0; i < qAns.length; i++) {
+    if (qAns[i] !== undefined) total += scores[qAns[i]];
+  }
+  var max = qData[qSit].questions.length * 3;
+  var pct = Math.round((total / max) * 100);
+  var r = qData[qSit].results;
+  var data = pct >= 75 ? r.high : pct >= 50 ? r.mid : pct >= 25 ? r.low : r.vlow;
+  var m = qMeta[qSit];
+
+  var answersSummary = '';
+  var qs = qData[qSit].questions;
+  for (var i = 0; i < qs.length; i++) {
+    if (qAns[i] !== undefined) {
+      answersSummary += 'Q' + (i+1) + ': ' + qs[i].text + ' | A: ' + qs[i].options[qAns[i]] + ' || ';
+    }
+  }
+
+  var submitBtn = document.getElementById('gate-submit-btn');
+  var sendingMsg = document.getElementById('gate-sending');
+  submitBtn.style.display = 'none';
+  sendingMsg.style.display = 'block';
+
+  var payload = JSON.stringify({
+    name: name,
+    email: email,
+    phone: phone,
+    situation: m.label,
+    score: pct + '%',
+    result: data.level,
+    answers: answersSummary
+  });
+
+  var img = new Image();
+  img.src = SHEETS_URL + '?data=' + encodeURIComponent(payload);
+  img.onload = function() { hideEl('q-gate'); qShowResult(); };
+  img.onerror = function() { hideEl('q-gate'); qShowResult(); };
+}
+
+function qGateSkip() {
+  hideEl('q-gate');
+  qShowResult();
+}
+
+function qShowResult() {
+  var scores = [3, 2, 1, 0];
+  var total = 0;
+  for (var i = 0; i < qAns.length; i++) {
+    if (qAns[i] !== undefined) total += scores[qAns[i]];
+  }
+  var max = qData[qSit].questions.length * 3;
+  var pct = Math.round((total / max) * 100);
+  var r = qData[qSit].results;
+  var data = pct >= 75 ? r.high : pct >= 50 ? r.mid : pct >= 25 ? r.low : r.vlow;
+  var m = qMeta[qSit];
+
+  var painHTML = '';
+  if (data.pain && data.pain.length) {
+    painHTML = '<div class="qresult-pain" style="background:' + m.bg + ';border-color:' + m.color + ';">';
+    painHTML += '<p class="qresult-pain-title" style="color:' + m.color + ';">What this means for you</p>';
+    for (var i = 0; i < data.pain.length; i++) {
+      painHTML += '<div class="qresult-pain-item" style="color:' + m.color + ';opacity:0.9;"><span style="flex-shrink:0;">-&gt;</span><span>' + data.pain[i] + '</span></div>';
+    }
+    painHTML += '</div>';
+  }
+
+  var itemsHTML = '';
+  for (var i = 0; i < data.items.length; i++) {
+    itemsHTML += '<div class="qresult-snapshot-item"><div class="qresult-dot" style="background:' + m.color + ';"></div>' + data.items[i] + '</div>';
+  }
+
+  var html = '<div class="qresult-score" style="background:' + m.bg + ';">';
+  html += '<span class="qresult-score-num" style="color:' + m.color + ';">' + pct + '%</span>';
+  html += '<span class="qresult-score-lbl" style="color:' + m.color + ';">readiness</span>';
+  html += '</div>';
+  html += '<div style="text-align:center;margin-bottom:1rem;"><span style="background:' + m.bg + ';color:' + m.color + ';padding:3px 12px;border-radius:20px;font-size:0.75rem;font-weight:500;">' + m.label + '</span></div>';
+  html += '<p class="qresult-title">' + data.level + '</p>';
+  html += '<p class="qresult-desc">' + data.desc + '</p>';
+  html += painHTML;
+  html += '<div class="qresult-snapshot"><p class="qresult-snapshot-title">Your snapshot</p>' + itemsHTML + '</div>';
+  html += '<a href="https://m.me/financial.advisor.donna.n" target="_blank" class="qresult-cta">' + data.cta + '</a>';
+  html += '<p class="qresult-note">Free. Just a real conversation about where to start.</p>';
+  html += '<button class="qresult-retake" onclick="qRestart()">Retake the quiz</button>';
+
+  var res = document.getElementById('q-result');
+  res.innerHTML = html;
+  showEl('q-result');
+}
+
+function qRestart() {
+  qSit = null; qCur = 0; qAns = [];
+  hideEl('q-result');
+  hideEl('q-gate');
+  hideEl('q-questions');
+  hideEl('q-sit');
+  showEl('q-hero');
+  var btns = document.querySelectorAll('.sit-btn');
+  for (var i = 0; i < btns.length; i++) btns[i].classList.remove('selected');
+  var sitBtn = document.getElementById('q-sit-btn');
+  sitBtn.style.opacity = '0.4';
+  sitBtn.style.pointerEvents = 'none';
+  document.getElementById('gate-name').value  = '';
+  document.getElementById('gate-email').value = '';
+  document.getElementById('gate-phone').value = '';
+  document.getElementById('gate-name-err').textContent  = '';
+  document.getElementById('gate-email-err').textContent = '';
+  document.getElementById('gate-phone-err').textContent = '';
+  var submitBtn = document.getElementById('gate-submit-btn');
+  submitBtn.style.display = 'block';
+  document.getElementById('gate-sending').style.display = 'none';
+}
+
+// =====================
+// NUMBER INPUT FORMATTER
+// =====================
+function formatNumberInput(input) {
+  var raw = input.value.replace(/,/g, '');
+  if (raw === '' || isNaN(raw)) return;
+  input.value = parseFloat(raw).toLocaleString('en-PH');
+}
+
+function getRawValue(id) {
+  var val = document.getElementById(id).value.replace(/,/g, '');
+  return parseFloat(val) || 0;
+}
+
+function attachFormatters() {
+  var ids = [
+    'b-income','b-rent','b-food','b-transport','b-utilities','b-loans','b-personal','b-other',
+    'bf-income','bf-kids','bf-rent','bf-food','bf-tuition','bf-allowance','bf-transport','bf-utilities','bf-loans','bf-other',
+    'r-monthly','r-rate','r-current','r-need',
+    'i-income','i-loans','i-existing','i-educ',
+    'e-expenses','e-savings','e-income',
+    's-target','s-saved','s-monthly'
+  ];
+  for (var i = 0; i < ids.length; i++) {
+    (function(id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.setAttribute('type', 'text');
+      el.setAttribute('inputmode', 'numeric');
+      el.addEventListener('input', function() {
+        var pos = this.selectionStart;
+        var oldLen = this.value.length;
+        var raw = this.value.replace(/[^0-9.]/g, '');
+        var parts = raw.split('.');
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        this.value = parts.length > 1 ? parts[0] + '.' + parts[1] : parts[0];
+        var newLen = this.value.length;
+        this.selectionStart = this.selectionEnd = pos + (newLen - oldLen);
+      });
+      el.addEventListener('blur', function() {
+        var raw = this.value.replace(/[^0-9.]/g, '');
+        if (!raw) return;
+        var num = parseFloat(raw);
+        if (!isNaN(num)) this.value = num.toLocaleString('en-PH');
+      });
+    })(ids[i]);
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', attachFormatters);
+} else {
+  attachFormatters();
+}
+
+// =====================
+// FAMILY BUDGET
+// =====================
+function calcBudgetFamily() {
+  var income    = getRawValue('bf-income');
+  var kids      = getRawValue('bf-kids') || 1;
+  var inflation = (getRawValue('bf-inflation') || 4) / 100;
+  var schoolIds = ['bf-tuition','bf-allowance'];
+  var otherIds  = ['bf-rent','bf-food','bf-transport','bf-utilities','bf-loans','bf-other'];
+  var schoolTotal = 0;
+  var otherTotal  = 0;
+  for (var i = 0; i < schoolIds.length; i++) schoolTotal += getRawValue(schoolIds[i]);
+  for (var i = 0; i < otherIds.length; i++)  otherTotal  += getRawValue(otherIds[i]);
+  var total    = schoolTotal + otherTotal;
+  var savings  = income - total;
+  var rate     = income > 0 ? (savings / income * 100) : 0;
+  var futureTotal  = total  * Math.pow(1 + inflation, 5);
+  var futureSchool = schoolTotal * Math.pow(1 + inflation, 5);
+  if (!income) return;
+  showEl('bf-result');
+  document.getElementById('bf-total-exp').textContent     = fmt(total);
+  document.getElementById('bf-school-total').textContent  = fmt(schoolTotal);
+  document.getElementById('bf-savings').textContent       = fmt(Math.max(savings, 0));
+  document.getElementById('bf-rate').textContent          = Math.max(rate, 0).toFixed(1) + '%';
+  document.getElementById('bf-school-future').textContent = fmt(futureSchool) + ' / month';
+  document.getElementById('bf-future').textContent        = fmt(futureTotal) + ' / month';
+  var status, advice;
+  if (savings < 0) {
+    status = 'Over Budget';
+    advice = 'Your family is spending ' + fmt(Math.abs(savings)) + ' more than you earn each month. With ' + (inflation*100).toFixed(0) + '% inflation, school and living costs will keep rising. Let\'s find ways to restructure before the gap gets bigger.';
+  } else if (rate < 10) {
+    status = 'Very Tight';
+    advice = 'You\'re saving less than 10% with ' + kids + ' kid(s) to support. School fees alone will cost ' + fmt(futureSchool) + '/month in 5 years. A small increase in savings now protects your family later.';
+  } else if (rate < 20) {
+    status = 'Getting There';
+    advice = 'You\'re managing well, but there\'s room to grow. School costs for ' + kids + ' kid(s) will increase every year — let\'s make sure your plan keeps up.';
+  } else {
+    status = 'On Track';
+    advice = 'Great discipline for a family with ' + kids + ' kid(s). Make sure your savings are invested — not just sitting in a bank account losing value to inflation.';
+  }
+  document.getElementById('bf-status').textContent = status;
+  document.getElementById('bf-advice').textContent = advice;
+}
+
+function calcBudget() {
+  var income = getRawValue('b-income');
+  var ids = ['b-rent','b-food','b-transport','b-utilities','b-loans','b-personal','b-other'];
+  var expenses = 0;
+  for (var i = 0; i < ids.length; i++) { expenses += getRawValue(ids[i]); }
+  var inflation = getRawValue('b-inflation') || 4;
+  if (!income) return;
+  var savings = income - expenses;
+  var rate = income > 0 ? (savings / income * 100) : 0;
+  var futureExpenses = expenses * Math.pow(1 + inflation / 100, 5);
+  showEl('b-result');
+  document.getElementById('b-total-exp').textContent = fmt(expenses);
+  document.getElementById('b-savings').textContent = fmt(Math.max(savings, 0));
+  document.getElementById('b-rate').textContent = Math.max(rate, 0).toFixed(1) + '%';
+  document.getElementById('b-future').textContent = fmt(futureExpenses) + ' / month';
+  var status, advice;
+  if (savings < 0) {
+    status = 'Over Budget';
+    advice = 'Your expenses are higher than your income by ' + fmt(Math.abs(savings)) + '. And with ' + inflation + '% inflation, costs will keep rising. Let\'s talk about how to restructure.';
+  } else if (rate < 10) {
+    status = 'Tight';
+    advice = 'You\'re saving less than 10% — and inflation at ' + inflation + '% means your expenses will cost ' + fmt(futureExpenses) + '/month in 5 years. Small adjustments now matter a lot.';
+  } else if (rate < 20) {
+    status = 'Getting There';
+    advice = 'You\'re saving something — good. But with inflation, your purchasing power shrinks every year. Let\'s make sure your savings are growing faster than prices.';
+  } else {
+    status = 'On Track';
+    advice = 'Great discipline. Just make sure your savings are invested — not just sitting in a bank account losing value to inflation.';
+  }
+  document.getElementById('b-status').textContent = status;
+  document.getElementById('b-advice').textContent = advice;
+}
+
+// =====================
+// RETIREMENT
+// =====================
+function calcRetirement() {
+  var age     = getRawValue('r-age');
+  var retire  = getRawValue('r-retire');
+  var monthly = getRawValue('r-monthly');
+  var rate    = (getRawValue('r-rate') || 7) / 100;
+  var current = getRawValue('r-current');
+  var need    = getRawValue('r-need');
+  var inflation = (getRawValue('r-inflation') || 4) / 100;
+  if (!age || !retire || retire <= age) return;
+  var years  = retire - age;
+  var months = years * 12;
+  var mr     = rate / 12;
+  var fv     = current * Math.pow(1 + mr, months) + monthly * (Math.pow(1 + mr, months) - 1) / mr;
+  var realFv = fv / Math.pow(1 + inflation, years);
+  var needed = need * 12 * 25;
+  var neededReal = needed / Math.pow(1 + inflation, years);
+  var gap    = realFv - (need ? neededReal : 0);
+  showEl('r-result');
+  document.getElementById('r-years').textContent = years + ' years';
+  document.getElementById('r-fund').textContent  = fmt(fv);
+  document.getElementById('r-real').textContent  = fmt(realFv) + " (in today's money)";
+  document.getElementById('r-needed').textContent = need ? fmt(neededReal) + " (in today's money)" : '-';
+  document.getElementById('r-gap').textContent   = need ? (gap >= 0 ? '+' + fmt(gap) : fmt(gap)) : fmt(realFv);
+  document.getElementById('r-advice').textContent = (gap >= 0 || !need)
+    ? 'You are on track — even after accounting for inflation. Want to see how to retire earlier or more comfortably? Let\'s talk.'
+    : 'After inflation, there is a gap of ' + fmt(Math.abs(gap)) + ' in today\'s purchasing power. The earlier you increase your monthly savings, the smaller this gap becomes.';
+}
+
+// =====================
+// INSURANCE
+// =====================
+function calcInsurance() {
+  var income   = getRawValue('i-income');
+  var loans    = getRawValue('i-loans');
+  var existing = getRawValue('i-existing');
+  var years    = getRawValue('i-years') || 10;
+  var educ     = getRawValue('i-educ');
+  if (!income) return;
+  var incomeNeed = income * years;
+  var total = incomeNeed + loans + educ;
+  var gap = Math.max(total - existing, 0);
+  showEl('i-result');
+  document.getElementById('i-income-need').textContent = fmt(incomeNeed);
+  document.getElementById('i-debt').textContent = fmt(loans);
+  document.getElementById('i-educ-r').textContent = fmt(educ);
+  document.getElementById('i-existing-r').textContent = fmt(existing);
+  document.getElementById('i-gap').textContent = fmt(gap);
+  document.getElementById('i-advice').textContent = gap > 0
+    ? 'You have a coverage gap of ' + fmt(gap) + '. This means your family may not be fully protected. Let\'s see what the right plan looks like.'
+    : 'Your existing coverage looks sufficient based on these numbers. Want to double-check that your policy still fits your current situation?';
+}
+
+// =====================
+// EMERGENCY FUND
+// =====================
+function calcEmergency() {
+  var expenses  = getRawValue('e-expenses');
+  var savings   = getRawValue('e-savings');
+  var deps      = getRawValue('e-deps');
+  var inflation = (getRawValue('e-inflation') || 4) / 100;
+  if (!expenses) return;
+  var months   = deps > 0 ? 6 : 3;
+  var target   = expenses * months;
+  var inflated = target * (1 + inflation);
+  var covered  = savings / expenses;
+  showEl('e-result');
+  document.getElementById('e-target').textContent   = fmt(target);
+  document.getElementById('e-inflated').textContent = fmt(inflated) + ' / month';
+  document.getElementById('e-current').textContent  = fmt(savings);
+  document.getElementById('e-months').textContent   = covered.toFixed(1) + ' months';
+  var status, advice;
+  if (covered >= 6) {
+    status = 'Well Covered';
+    advice = 'Your emergency fund is solid. Just remember — inflation means you should review this amount every year to make sure it still covers your actual expenses.';
+  } else if (covered >= 3) {
+    status = 'Adequate';
+    advice = 'You have a base, but with ' + (inflation * 100).toFixed(0) + '% inflation, your expenses will be higher next year. Building to 6 months gives you real security.';
+  } else {
+    status = 'Needs Work';
+    advice = 'Your emergency fund is below the safe level — and inflation means the gap is growing. This is the first thing to fix before anything else. Let\'s talk.';
+  }
+  document.getElementById('e-status').textContent = status;
+  document.getElementById('e-advice').textContent = advice;
+}
+
+// =====================
+// SAVINGS GOAL
+// =====================
+function calcSavings() {
+  var target    = getRawValue('s-target');
+  var saved     = getRawValue('s-saved');
+  var monthly   = getRawValue('s-monthly');
+  var inflation = (getRawValue('s-inflation') || 4) / 100;
+  if (!target || !monthly) return;
+  var remaining  = Math.max(target - saved, 0);
+  var monthsBase = Math.ceil(remaining / monthly);
+  if (monthsBase > 600) { monthsBase = 600; } // cap at 50 years
+  var yearsBase  = monthsBase / 12;
+  var realTarget = target * Math.pow(1 + inflation, yearsBase);
+  var realRemaining = Math.max(realTarget - saved, 0);
+  var monthsFinal = Math.ceil(realRemaining / monthly);
+  if (monthsFinal > 600) { monthsFinal = 600; }
+  var date = new Date();
+  date.setMonth(date.getMonth() + monthsFinal);
+  var dateStr = date.toLocaleDateString('en-PH', { month: 'long', year: 'numeric' });
+  showEl('s-result');
+  document.getElementById('s-target-now').textContent  = fmt(target);
+  document.getElementById('s-target-real').textContent = fmt(realTarget) + ' (by the time you reach it)';
+  document.getElementById('s-remaining').textContent   = fmt(realRemaining);
+  document.getElementById('s-months').textContent      = monthsFinal + ' months';
+  document.getElementById('s-date').textContent        = dateStr;
+  document.getElementById('s-advice').textContent = monthsFinal <= 12
+    ? 'You can reach this goal within a year. Stay consistent — and make sure your savings are in an account that earns more than inflation.'
+    : 'With inflation, your real target is ' + fmt(realTarget) + ' — not just ' + fmt(target) + '. The earlier you increase your monthly savings, the closer these numbers get.';
+}
+
+// =====================
+// DOWNLOAD RESULT
+// =====================
+function downloadResult(tool) {
+  var titles = {
+    budget:         'Monthly Budget Summary',
+    'budget-family':'Family Budget Summary',
+    retirement:     'Retirement Fund Summary',
+    insurance:      'Insurance Needs Summary',
+    emergency:      'Emergency Fund Summary',
+    savings:        'Savings Goal Summary'
+  };
+
+  var resultEl = document.getElementById(tool === 'budget' ? 'b-result' :
+    tool === 'budget-family' ? 'bf-result' :
+    tool === 'retirement'    ? 'r-result' :
+    tool === 'insurance'     ? 'i-result' :
+    tool === 'emergency'     ? 'e-result' : 's-result');
+
+  if (!resultEl) return;
+
+  var rows = resultEl.querySelectorAll('.tool-result-row');
+  var highlight = resultEl.querySelector('.tool-result-highlight');
+  var advice = resultEl.querySelector('.tool-cta-note');
+
+  var rowsHTML = '';
+  for (var i = 0; i < rows.length; i++) {
+    var spans = rows[i].querySelectorAll('span');
+    if (spans.length >= 2) {
+      rowsHTML += '<tr><td style="padding:10px 14px;color:#666;border-bottom:1px solid #eee;font-size:14px;">' + spans[0].textContent + '</td><td style="padding:10px 14px;font-weight:600;border-bottom:1px solid #eee;text-align:right;font-size:14px;">' + spans[1].textContent + '</td></tr>';
+    }
+  }
+
+  var highlightHTML = '';
+  if (highlight) {
+    var lbl = highlight.querySelector('.label');
+    var val = highlight.querySelector('.value');
+    if (lbl && val) {
+      highlightHTML = '<tr style="background:#1A1916;"><td style="padding:14px;color:#B89C6E;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;">' + lbl.textContent + '</td><td style="padding:14px;color:#ffffff;font-size:1.5rem;font-weight:300;text-align:right;">' + val.textContent + '</td></tr>';
+    }
+  }
+
+  var adviceHTML = advice ? '<p style="margin-top:20px;font-size:14px;color:#666;font-style:italic;line-height:1.7;padding:16px;background:#f9f7f4;border-left:3px solid #B89C6E;">' + advice.textContent + '</p>' : '';
+
+  var win = window.open('', '_blank');
+  win.document.write(
+    '<!DOCTYPE html><html><head><title>' + titles[tool] + '</title>' +
+    '<style>*{box-sizing:border-box;margin:0;padding:0;}body{font-family:\'Segoe UI\',sans-serif;padding:40px;color:#1A1916;max-width:640px;margin:0 auto;}' +
+    'h1{font-size:1.6rem;font-weight:300;margin-bottom:4px;}' +
+    '.sub{font-size:13px;color:#999;margin-bottom:30px;}' +
+    'table{width:100%;border-collapse:collapse;margin-bottom:8px;}' +
+    '.footer-note{margin-top:30px;padding-top:20px;border-top:1px solid #eee;font-size:12px;color:#999;line-height:1.6;}' +
+    '@media print{button{display:none!important;}}' +
+    '</style></head><body>' +
+    '<div style="margin-bottom:24px;">' +
+    '<div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:#B89C6E;margin-bottom:8px;">Donna Nuqui &middot; Licensed Financial Advisor</div>' +
+    '<h1>' + titles[tool] + '</h1>' +
+    '<p class="sub">Generated on ' + new Date().toLocaleDateString('en-PH', {year:'numeric',month:'long',day:'numeric'}) + '</p>' +
+    '</div>' +
+    '<table>' + rowsHTML + highlightHTML + '</table>' +
+    adviceHTML +
+    '<div class="footer-note">' +
+    'This summary is based on the information you provided and is for reference only.<br>' +
+    'For a personalized financial plan, message Donna at <strong>m.me/financial.advisor.donna.n</strong> &mdash; it\'s free.' +
+    '</div>' +
+    '<br><button onclick="window.print()" style="padding:10px 24px;background:#1A1916;color:white;border:none;cursor:pointer;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;margin-top:10px;">Print / Save as PDF</button>' +
+    '</body></html>'
+  );
+  win.document.close();
+}
+
+// =====================
+// CONTACT FORM
+// =====================
+function sendToMessenger() {
+  var name    = document.getElementById('c-name').value.trim();
+  var email   = document.getElementById('c-email').value.trim();
+  var message = document.getElementById('c-message').value.trim();
+  if (!name || !message) {
+    alert('Please fill in your name and message before sending.');
+    return;
+  }
+  var text = "Hi Donna! I came from your website.\n\nName: " + name + (email ? "\nEmail: " + email : "") + "\n\nMessage: " + message;
+  window.open("https://m.me/financial.advisor.donna.n?text=" + encodeURIComponent(text), '_blank');
+}
+</script>
+
+</body>
+</html>
