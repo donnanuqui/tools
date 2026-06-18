@@ -113,7 +113,7 @@ section{padding:7rem 6vw}
 .tool-tab.active{background:var(--accent);color:var(--ink);border-color:var(--accent);font-weight:500}
 .tool-panel{display:none}
 .tool-panel.active{display:block}
-.tool-box{background:#2a2a27;border:1px solid rgba(255,255,255,0.15);padding:16px;max-width:760px}
+.tool-box{background:#2a2a27;border:1px solid rgba(255,255,255,0.15);padding:2.5rem;max-width:760px}
 .tool-box h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;margin-bottom:0.5rem;color:#ffffff}
 .tool-desc{font-size:1.1rem;color:#e8e4dc;margin-bottom:2rem;line-height:1.7}
 .tool-field{display:flex;flex-direction:column;gap:0.35rem;margin-bottom:1.25rem}
@@ -145,7 +145,7 @@ section{padding:7rem 6vw}
 .quiz-badge{display:inline-block;font-size:1.1rem;font-weight:500;padding:3px 12px;border-radius:20px;margin-bottom:1rem}
 .quiz-qtext{font-size:1.1rem;font-weight:500;line-height:1.5;margin-bottom:1.25rem;color:#ffffff}
 /* LEAD GATE */
-.lead-gate{background:#2a2a27;border:1px solid rgba(255,255,255,0.15);padding:16px;text-align:center}
+.lead-gate{background:#2a2a27;border:1px solid rgba(255,255,255,0.15);padding:2rem;text-align:center}
 .lead-gate h4{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;margin-bottom:0.5rem;color:#ffffff}
 .lead-gate p.gate-desc{font-size:1.02rem;color:#e0dcd4;margin-bottom:1.5rem;line-height:1.7}
 .lead-gate-fields{display:flex;flex-direction:column;gap:0.75rem;margin-bottom:1rem}
@@ -194,6 +194,11 @@ section{padding:7rem 6vw}
 footer{border-top:1px solid var(--bone);padding:2rem 6vw;display:flex;justify-content:space-between;align-items:center;font-size:1.1rem;color:var(--muted);letter-spacing:0.06em}
 .inflation-card{background:rgba(184,156,110,0.12);border:1px solid rgba(184,156,110,0.3);border-radius:6px;padding:1.1rem 1.25rem;margin-top:1.25rem}
 .inflation-card-header{display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem}
+.inflation-rows{margin:0.5rem 0 0.75rem}
+.inflation-row{display:flex;justify-content:space-between;align-items:center;padding:0.5rem 0;border-bottom:1px solid rgba(184,156,110,0.2);font-size:0.95rem}
+.inflation-row:last-child{border-bottom:none}
+.inflation-row span:first-child{color:#e8e4dc}
+.inflation-row span:last-child{font-weight:600;color:var(--accent)}
 .inflation-icon{font-size:1.1rem}
 .inflation-label{font-size:0.85rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:var(--accent)}
 .inflation-text{font-size:1.05rem;color:#e8e4dc;line-height:1.7;font-style:normal}
@@ -278,9 +283,9 @@ footer{border-top:1px solid var(--bone);padding:2rem 6vw;display:flex;justify-co
         <p style="font-size:0.95rem;font-weight:500;margin-bottom:0.35rem;color:#ffffff;">First &mdash; which best describes you?</p>
         <p style="font-size:0.85rem;color:#e0dcd4;margin-bottom:1.25rem;">Your results will be personalized based on your situation.</p>
         <button class="sit-btn" onclick="qSelectSit('breadwinner',this)"><span class="sit-btn-icon">&#127968;</span><div><strong style="font-size:1.05rem;color:#ffffff;display:block;margin-bottom:4px;">I'm the breadwinner</strong><span style="font-size:0.95rem;color:#e8e4dc;line-height:1.5;">I support my spouse, kids, or immediate family. My income keeps the household running.</span></div></button>
-        <button class="sit-btn" onclick="qSelectSit('single_parent',this)"><span class="sit-btn-icon">&#128105;</span><div><strong style="font-size:1.05rem;color:#ffffff;display:block;margin-bottom:4px;">I'm a single parent</strong><span style="font-size:0.95rem;color:#e8e4dc;line-height:1.5;">I run the household on a single income. My kids completely depend on my solo earnings.</span></div></button>
+        <button class="sit-btn" onclick="qSelectSit('single_parent',this)"><span class="sit-btn-icon">&#128105;</span><div><strong style="font-size:1.05rem;color:#ffffff;display:block;margin-bottom:4px;">I'm a single parent</strong><span style="font-size:0.8rem;color:var(--muted);">I run the household on a single income. My kids completely depend on my solo earnings.</span></div></button>
         <button class="sit-btn" onclick="qSelectSit('sandwich',this)"><span class="sit-btn-icon">&#128116;</span><div><strong style="font-size:1.05rem;color:#ffffff;display:block;margin-bottom:4px;">I'm in the sandwich generation</strong><span style="font-size:0.95rem;color:#e8e4dc;line-height:1.5;">I support both my kids AND my aging parents at the same time. Two generations depend on me.</span></div></button>
-        <button class="sit-btn" onclick="qSelectSit('solo',this)"><span class="sit-btn-icon">&#128100;</span><div><strong style="font-size:1.05rem;color:#ffffff;display:block;margin-bottom:4px;">I'm living independently</strong><span style="font-size:0.95rem;color:#e8e4dc;line-height:1.5;">I manage my finances solo. No dependents &mdash; just me building my future.</span></div></button>
+        <button class="sit-btn" onclick="qSelectSit('solo',this)"><span class="sit-btn-icon">&#128100;</span><div><strong style="font-size:1.05rem;color:#ffffff;display:block;margin-bottom:4px;">I'm living independently</strong><span style="font-size:0.8rem;color:var(--muted);">I manage my finances solo. No dependents &mdash; just me building my future.</span></div></button>
         <button class="btn-primary" id="q-sit-btn" style="width:100%;text-align:center;opacity:0.4;pointer-events:none;" onclick="qStart()">Continue</button>
       </div>
       <div id="q-questions" style="display:none;">
@@ -401,7 +406,6 @@ footer{border-top:1px solid var(--bone);padding:2rem 6vw;display:flex;justify-co
         <div class="tool-field"><label>Current Age</label><input type="text" inputmode="numeric" id="r-age" placeholder="e.g. 32" oninput="calcRetirement()"></div>
         <div class="tool-field"><label>Target Retirement Age</label><input type="text" inputmode="numeric" id="r-retire" placeholder="e.g. 60" oninput="calcRetirement()"></div>
         <div class="tool-field"><label>Monthly Savings (PHP)</label><input type="text" inputmode="numeric" id="r-monthly" placeholder="e.g. 3,000" oninput="calcRetirement()"></div>
-        <div class="tool-field"><label>Expected Annual Return (%)</label><input type="text" inputmode="numeric" id="r-rate" placeholder="e.g. 7" oninput="calcRetirement()"></div>
         <div class="tool-field"><label>Current Savings (PHP)</label><input type="text" inputmode="numeric" id="r-current" placeholder="e.g. 50,000" oninput="calcRetirement()"></div>
         <div class="tool-field"><label>Monthly Retirement Budget (PHP)</label><input type="text" inputmode="numeric" id="r-need" placeholder="e.g. 30,000" oninput="calcRetirement()"></div>
         </div>
@@ -491,17 +495,21 @@ footer{border-top:1px solid var(--bone);padding:2rem 6vw;display:flex;justify-co
         <div class="tool-field"><label>Monthly Savings (PHP)</label><input type="text" inputmode="numeric" id="s-monthly" placeholder="e.g. 5,000" oninput="calcSavings()"></div>
         </div>
       <div id="s-result" style="display:none;">
-        <div class="tool-result-row"><span>Target Today</span><span id="s-target-now">-</span></div>
-        <div class="tool-result-row"><span>Inflation-Adjusted Target</span><span id="s-target-real">-</span></div>
+        <div class="tool-result-row"><span>Target Amount</span><span id="s-target-now">-</span></div>
         <div class="tool-result-row"><span>Amount Still Needed</span><span id="s-remaining">-</span></div>
         <div class="tool-result-row"><span>Months to Goal</span><span id="s-months">-</span></div>
         <div class="tool-result-highlight"><span class="label">You'll reach your goal by</span><span class="value" id="s-date">-</span></div>
-        <div class="inflation-card">
+        <div class="inflation-card" id="s-inflation-card">
           <div class="inflation-card-header">
             <span class="inflation-icon">&#128200;</span>
             <span class="inflation-label">Inflation Impact (4% per year)</span>
           </div>
-          <p class="inflation-text">That house you want for PHP 3M today might cost PHP 4.4M in 10 years. This tool adjusts your target so you're saving for the real price.</p>
+          <div class="inflation-rows">
+            <div class="inflation-row"><span>Inflation-adjusted target</span><span id="s-target-real">-</span></div>
+            <div class="inflation-row"><span>Realistic months to goal</span><span id="s-months-real">-</span></div>
+            <div class="inflation-row"><span>Realistic completion date</span><span id="s-date-real">-</span></div>
+          </div>
+          <p class="inflation-text" id="s-inflation-text">Your savings goal needs to keep up with rising prices. We adjust your target so you save for the real cost — not just today's price.</p>
         </div>
         <p class="tool-cta-note" id="s-advice"></p>
         <button class="download-btn" onclick="downloadResult('savings')">&#8681; Download My Savings Summary</button>
@@ -900,7 +908,7 @@ function attachFormatters() {
   var ids = [
     'b-income','b-rent','b-food','b-transport','b-utilities','b-loans','b-personal','b-other',
     'bf-income','bf-kids','bf-rent','bf-food','bf-tuition','bf-allowance','bf-transport','bf-utilities','bf-loans','bf-other',
-    'r-monthly','r-rate','r-current','r-need',
+    'r-monthly','r-current','r-need',
     'i-income','i-loans','i-existing','i-educ',
     'e-expenses','e-savings','e-income',
     's-target','s-saved','s-monthly'
@@ -1021,7 +1029,7 @@ function calcRetirement() {
   var age     = getRawValue('r-age');
   var retire  = getRawValue('r-retire');
   var monthly = getRawValue('r-monthly');
-  var rate    = (getRawValue('r-rate') || 7) / 100;
+  var rate    = 0.07; // Conservative average return
   var current = getRawValue('r-current');
   var need    = getRawValue('r-need');
   var inflation = 0.04;
@@ -1040,6 +1048,14 @@ function calcRetirement() {
   document.getElementById('r-real').textContent  = fmt(realFv) + " (in today's money)";
   document.getElementById('r-needed').textContent = need ? fmt(neededReal) + " (in today's money)" : '-';
   document.getElementById('r-gap').textContent   = need ? (gap >= 0 ? '+' + fmt(gap) : fmt(gap)) : fmt(realFv);
+  // Dynamic inflation note based on user's actual budget
+  var infText = document.getElementById('r-inflation-text');
+  if (infText && need) {
+    var futureBudget = need * Math.pow(1 + inflation, years);
+    infText.textContent = 'A ' + fmt(need) + ' monthly retirement budget today will cost about ' + fmt(futureBudget) + '/month by the time you retire in ' + years + ' years. That is why building wealth that beats inflation matters.';
+  } else if (infText) {
+    infText.textContent = "\"Worth in today's money\" shows what your future fund can actually buy — inflation makes money worth less over time.";
+  }
   document.getElementById('r-advice').textContent = (gap >= 0 || !need)
     ? 'You are on track — even after accounting for inflation. Want to see how to retire earlier or more comfortably? Let\'s talk.'
     : 'After inflation, there is a gap of ' + fmt(Math.abs(gap)) + ' in today\'s purchasing power. The earlier you increase your monthly savings, the smaller this gap becomes.';
@@ -1112,64 +1128,88 @@ function calcSavings() {
   var inflation = 0.04;
   if (!target || !monthly) return;
 
-  // Solve for actual months considering compound inflation:
-  // realTarget(t) = target * (1.04)^(t/12)
-  // We need: monthly * t = realTarget(t) - saved
-  // Iterate to converge
-  var months = 0;
+  // Calculate WITHOUT inflation (original prices)
+  var remainingNow = Math.max(target - saved, 0);
+  var monthsNow = Math.ceil(remainingNow / monthly);
+  var dateNow = new Date();
+  dateNow.setMonth(dateNow.getMonth() + monthsNow);
+  var dateNowStr = dateNow.toLocaleDateString('en-PH', { month: 'long', year: 'numeric' });
+
+  function timeStr(months) {
+    var years = Math.floor(months / 12);
+    var rem = months % 12;
+    var s = '';
+    if (years > 0) s = years + ' year' + (years > 1 ? 's' : '');
+    if (rem > 0) s += (years > 0 ? ' ' : '') + rem + ' month' + (rem > 1 ? 's' : '');
+    if (!s) s = months + ' months';
+    return s;
+  }
+
+  showEl('s-result');
+  document.getElementById('s-target-now').textContent = fmt(target);
+  document.getElementById('s-remaining').textContent  = fmt(remainingNow);
+
+  var inflationCard = document.getElementById('s-inflation-card');
+  var inflationText = document.getElementById('s-inflation-text');
+
+  // Now solve for inflation-adjusted scenario
+  var monthsReal = 0;
   var realTarget = target;
   var found = false;
   for (var t = 1; t <= 600; t++) {
     var rt = target * Math.pow(1 + inflation, t / 12);
     var needed = Math.max(rt - saved, 0);
     if (monthly * t >= needed) {
-      months = t;
+      monthsReal = t;
       realTarget = rt;
       found = true;
       break;
     }
   }
 
-  showEl('s-result');
-  document.getElementById('s-target-now').textContent = fmt(target);
-
-  if (!found) {
-    // Unreachable within 50 years - compute what monthly is needed
-    var realTarget30 = target * Math.pow(1 + inflation, 30); // 30 years
-    var neededMonthly30 = Math.ceil((realTarget30 - saved) / 360);
-    var realTarget10 = target * Math.pow(1 + inflation, 10);
-    var neededMonthly10 = Math.ceil((realTarget10 - saved) / 120);
-
-    document.getElementById('s-target-real').textContent = 'Goal not reachable at this pace';
-    document.getElementById('s-remaining').textContent = 'Need to increase monthly savings';
+  if (monthsNow > 600) {
+    // Even without inflation, this is unrealistic
     document.getElementById('s-months').textContent = 'Beyond 50 years';
     document.getElementById('s-date').textContent = '—';
+    if (inflationCard) inflationCard.style.display = 'none';
+    var realTarget10 = target * Math.pow(1 + inflation, 10);
+    var neededMonthly10 = Math.ceil((realTarget10 - saved) / 120);
     document.getElementById('s-advice').textContent =
       'At ' + fmt(monthly) + '/month, this goal is unrealistic. To reach ' + fmt(target) +
       ' in 10 years, you would need around ' + fmt(neededMonthly10) +
-      '/month. For 30 years, around ' + fmt(neededMonthly30) +
       '/month. Adjust your monthly savings or goal to see a realistic timeline.';
     return;
   }
 
-  var realRemaining = Math.max(realTarget - saved, 0);
-  var date = new Date();
-  date.setMonth(date.getMonth() + months);
-  var dateStr = date.toLocaleDateString('en-PH', { month: 'long', year: 'numeric' });
-  var years = Math.floor(months / 12);
-  var remainderMonths = months % 12;
-  var timeStr = '';
-  if (years > 0) timeStr = years + ' year' + (years > 1 ? 's' : '');
-  if (remainderMonths > 0) timeStr += (years > 0 ? ' ' : '') + remainderMonths + ' month' + (remainderMonths > 1 ? 's' : '');
-  if (!timeStr) timeStr = months + ' months';
+  document.getElementById('s-months').textContent = timeStr(monthsNow);
+  document.getElementById('s-date').textContent   = dateNowStr;
 
-  document.getElementById('s-target-real').textContent = fmt(realTarget) + ' (by the time you reach it)';
-  document.getElementById('s-remaining').textContent   = fmt(realRemaining);
-  document.getElementById('s-months').textContent      = timeStr;
-  document.getElementById('s-date').textContent        = dateStr;
-  document.getElementById('s-advice').textContent = months <= 12
+  if (inflationCard) inflationCard.style.display = 'block';
+
+  if (!found) {
+    // Inflation makes it unreachable
+    document.getElementById('s-target-real').textContent = fmt(target * Math.pow(1 + inflation, monthsNow / 12)) + ' (estimated)';
+    document.getElementById('s-months-real').textContent = 'Beyond 50 years with inflation';
+    document.getElementById('s-date-real').textContent = '—';
+    if (inflationText) {
+      inflationText.textContent = 'Without inflation, you would reach ' + fmt(target) + ' in ' + timeStr(monthsNow) + '. But because prices keep rising, you will need to either save more monthly or accept that the real timeline is longer.';
+    }
+  } else {
+    var dateReal = new Date();
+    dateReal.setMonth(dateReal.getMonth() + monthsReal);
+    var dateRealStr = dateReal.toLocaleDateString('en-PH', { month: 'long', year: 'numeric' });
+    document.getElementById('s-target-real').textContent = fmt(realTarget);
+    document.getElementById('s-months-real').textContent = timeStr(monthsReal);
+    document.getElementById('s-date-real').textContent   = dateRealStr;
+    if (inflationText) {
+      var diff = monthsReal - monthsNow;
+      inflationText.textContent = 'Your ' + fmt(target) + ' goal today will actually cost ' + fmt(realTarget) + ' by the time you reach it. That is ' + diff + ' extra month' + (diff !== 1 ? 's' : '') + ' of saving just to keep up with rising prices.';
+    }
+  }
+
+  document.getElementById('s-advice').textContent = monthsNow <= 12
     ? 'You can reach this goal within a year. Stay consistent — and make sure your savings are in an account that earns more than inflation.'
-    : 'With inflation, your real target is ' + fmt(realTarget) + ' — not just ' + fmt(target) + '. The earlier you increase your monthly savings, the closer these numbers get.';
+    : 'The earlier you increase your monthly savings, the less inflation will affect your goal. Want to talk through how to accelerate this?';
 }
 
 // =====================
